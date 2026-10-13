@@ -4,7 +4,7 @@ D.I.Visor (visor de diseño industrial) es un piloto sobre el Edificio 106 de Is
 
 En vivo: https://caamanoluismiguel.github.io/di-visor/
 
-Es un piloto aparte del [visor de sol y clima del Edificio 106](https://github.com/caamanoluismiguel/edificio-106). Si demuestra valor para la enseñanza, se evaluará integrarlo.
+Este piloto queda congelado: solo recibe correcciones, y su contenido pasa al [visor del Edificio 106](https://caamanoluismiguel.github.io/edificio-106/), que es el modelo vigente.
 
 ## Qué hace
 
@@ -12,6 +12,18 @@ Es un piloto aparte del [visor de sol y clima del Edificio 106](https://github.c
 - Siete sistemas que se pueden aislar (base, losas y cartelas, muros, ventanas y lamas, cubierta, accesos, instalaciones).
 - Despiece, corte longitudinal, transversal y en planta, y piezas que se tocan para ver su ficha.
 - Seis mecanismos en detalle con un control propio: teja canal y cobija, alero y sombra, celosía de lamas, rampa contra escalera, condensadora y ático.
+
+## Enlaces con estado
+
+La dirección guarda lo que se está viendo y se actualiza sola; «Copiar enlace» la copia tal cual.
+
+- `?leccion=l12` abre una lección (`l01` a `l24`, como en `contenido/lecciones.json`).
+- `?sistema=cubierta` aísla un sistema (`base`, `estructura`, `muros`, `ventanas`, `cubierta`, `accesos`, `servicios`).
+- `?pieza=exposed_timber_rafter` elige una familia por su clave (el nombre de `docs/FAMILIAS.md` en minúsculas, sin acentos y con guiones bajos). También valen los nombres de las partes del visor del 106: `techo`, `alero`, `mensula`, `vano`, `modulo`, `principal`, `lateral`, `zocalo`.
+- `&corte=z:0.5` corta por un plano (`x` transversal, `y` planta, `z` longitudinal) a esa fracción del edificio, de 0 a 1.
+- `&desp=0.4` separa los sistemas; `&mec=0.6` mueve el mecanismo de una lección con detalle.
+
+Ejemplo: `?leccion=l07&corte=x:0.4&desp=0.3`. También se leen desde el hash (`#leccion=l12&meca=0,6`) y con coma decimal.
 
 ## Qué tan cierto es
 

@@ -330,7 +330,10 @@ function abrirLeccion(i) {
     if (l.camara) volar(l.camara.pos, l.camara.obj);
     else encuadrar(l.piezas?.length ? p : null);
   }
-  if (angosto.matches) ($('lectura').hidden ? lienzo : $('lectura')).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (angosto.matches && !restaurando) ($('lectura').hidden ? lienzo : $('lectura')).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  estado.sistema = null;
+  estado.pieza = null;
+  escribirURL();
 }
 
 // ---------------------------------------------------------------- detalle (mecanismos)
@@ -407,6 +410,7 @@ function dibujarDetalle(geo, opciones = {}) {
 
 document.querySelector('[data-vista="todo"]').addEventListener('click', () => {
   verEdificio();
+  escribirURL();
   if (actual >= 0 && !DATOS.lecciones[actual].detalle) return;
   resaltar(null);
   encuadrar(null);
@@ -414,6 +418,7 @@ document.querySelector('[data-vista="todo"]').addEventListener('click', () => {
 $('btn-detalle').addEventListener('click', () => {
   const l = DATOS.lecciones[actual];
   if (l?.detalle) verDetalle(l.detalle);
+  escribirURL();
 });
 
 // ---------------------------------------------------------------- sistemas (barra inferior)
@@ -423,17 +428,24 @@ function pintarSistemas() {
     const b = document.createElement('button');
     b.textContent = s.t;
     b.dataset.s = s.k;
-    b.addEventListener('click', () => {
-      verEdificio();
-      marcarSistema(s.k);
-      const p = (r) => r.sistema === s.k;
-      resaltar(p);
-      encuadrar(p);
-      const f = DATOS.sistemas?.[s.k] || {};
-      ficha({ titulo: s.t, ...f, codigo: `Sistema · ${s.t}` });
-    });
+    b.addEventListener('click', () => abrirSistema(s.k));
     nav.appendChild(b);
   }
+}
+function abrirSistema(k) {
+  const s = SISTEMAS.find((x) => x.k === k);
+  if (!s) return false;
+  verEdificio();
+  marcarSistema(s.k);
+  const p = (r) => r.sistema === s.k;
+  resaltar(p);
+  encuadrar(p);
+  const f = DATOS.sistemas?.[s.k] || {};
+  ficha({ titulo: s.t, ...f, codigo: `Sistema · ${s.t}` });
+  estado.sistema = s.k;
+  estado.pieza = null;
+  escribirURL();
+  return true;
 }
 function marcarSistema(k) {
   document.querySelectorAll('.sistemas button').forEach((b) => b.classList.toggle('activo', b.dataset.s === k));
@@ -445,6 +457,12 @@ $('f-todo').addEventListener('click', () => {
   resaltar(null);
   ficha({ codigo: 'Sistema completo', ...DATOS.edificio });
   encuadrar(null);
+  actual = -1;
+  estado.sistema = null;
+  estado.pieza = null;
+  $('btn-detalle').disabled = true;
+  $('avance').textContent = `00 / ${String(DATOS.lecciones.length).padStart(2, '0')}`;
+  escribirURL();
 });
 
 // ---------------------------------------------------------------- tocar una pieza
@@ -461,22 +479,35 @@ renderer.domElement.addEventListener('pointerup', (e) => {
   const hits = ray.intersectObjects(registro.filter((x) => x.relleno.material.opacity > 0.5).map((x) => x.relleno), false)
     .filter((h) => plano.distanceToPoint(h.point) >= 0);
   if (!hits.length) return;
-  const fam = hits[0].object.userData.fam;
-  const p = DATOS.piezas?.[fam] || {};
-  resaltar((x) => x.fam === fam);
-  marcarSistema(hits[0].object.userData.sistema);
-  ficha({ titulo: fam, texto: 'Esta pieza todavía no tiene ficha.', ...p, codigo: `Pieza · ${fam.replace(/^entrada:/, '').replace(/\s—\s/g, ', ')}` });
+  abrirPieza(hits[0].object.userData.fam);
 });
+function abrirPieza(fam, encuadre = false) {
+  const reg = registro.find((x) => x.fam === fam);
+  if (!reg) return false;
+  if (!raiz.visible) verEdificio();
+  const p = DATOS.piezas?.[fam] || {};
+  const prueba = (x) => x.fam === fam;
+  resaltar(prueba);
+  if (encuadre) encuadrar(prueba);
+  marcarSistema(reg.sistema);
+  ficha({ titulo: fam, texto: 'Esta pieza todavía no tiene ficha.', ...p, codigo: `Pieza · ${fam.replace(/^entrada:/, '').replace(/\s—\s/g, ', ')}` });
+  estado.pieza = fam;
+  estado.sistema = null;
+  escribirURL();
+  return true;
+}
 
 // ---------------------------------------------------------------- despiece y corte
 let despiece = 0;
 let eje = 'z';
 let corte = 1;
 let caja = new THREE.Box3();
-$('r-desp').addEventListener('input', (e) => {
-  despiece = +e.target.value;
+function ponerDespiece(v) {
+  despiece = v;
+  $('r-desp').value = v;
   $('v-desp').textContent = `${Math.round(despiece * 100)} %`;
-});
+}
+$('r-desp').addEventListener('input', (e) => { ponerDespiece(+e.target.value); escribirURL(); });
 // el plano de corte se dibuja como un rectángulo discontinuo, como en un plano
 const marcoCorte = new THREE.LineSegments(
   new THREE.EdgesGeometry(new THREE.PlaneGeometry(1, 1)),
@@ -504,21 +535,120 @@ function aplicarCorte() {
   }
   $('v-corte').textContent = corte >= 0.999 ? 'sin corte' : `${eje === 'y' ? 'h' : eje} = ${v.toFixed(2).replace('.', ',')} m`;
 }
-$('r-corte').addEventListener('input', (e) => { corte = +e.target.value; aplicarCorte(); });
+$('r-corte').addEventListener('input', (e) => { corte = +e.target.value; aplicarCorte(); escribirURL(); });
+function ponerEje(e) {
+  eje = e;
+  document.querySelectorAll('.ejes button').forEach((x) => x.classList.toggle('activo', x.dataset.eje === e));
+}
 document.querySelectorAll('.ejes button').forEach((b) => b.addEventListener('click', () => {
-  eje = b.dataset.eje;
-  document.querySelectorAll('.ejes button').forEach((x) => x.classList.toggle('activo', x === b));
+  ponerEje(b.dataset.eje);
   // elegir un plano abre el edificio por la mitad (en planta, a media altura del primer piso)
   if (corte >= 0.999) {
     corte = eje === 'y' ? 0.17 : 0.5;
     $('r-corte').value = corte;
   }
   aplicarCorte();
+  escribirURL();
 }));
 let mec = 0;
-$('r-mec').addEventListener('input', (e) => {
-  mec = +e.target.value;
+function ponerMec(v) {
+  mec = v;
+  $('r-mec').value = v;
   $('v-mec').textContent = `${Math.round(mec * 100)} %`;
+}
+$('r-mec').addEventListener('input', (e) => { ponerMec(+e.target.value); escribirURL(); });
+
+// ---------------------------------------------------------------- URL con estado
+// ?leccion=l12 &sistema=cubierta &pieza=<familia> &corte=z:0.5 &desp=0.4 &mec=0.6 (y ?prueba se conserva).
+// Se lee al cargar (también desde #leccion=…, la forma del 106) y se reescribe con replaceState al cambiar.
+const CLAVES = ['leccion', 'sistema', 'pieza', 'corte', 'desp', 'mec', 'meca'];
+const estado = { sistema: null, pieza: null };
+let restaurando = false;
+// una familia del visor en minúsculas y sin acentos: «Photo-matched white haunch» → photo_matched_white_haunch
+const clave = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+// nombres cortos para enlazar desde el 106 (sus PARTES) y los de uso común. Una lección cuando la parte es un conjunto.
+const ALIAS = {
+  techo: { sistema: 'cubierta' }, alero: { leccion: 'l12' }, mensula: { fam: 'Photo-matched white haunch' },
+  vano: { leccion: 'l07' }, modulo: { leccion: 'l08' }, principal: { leccion: 'l08' }, lateral: { leccion: 'l08' },
+  zocalo: { leccion: 'l06' }, cabio: { fam: 'Exposed timber rafter' }, alfeizar: { fam: 'window sill' },
+  moldura: { fam: 'continuous sill band' }, teja: { leccion: 'l11' }, celosia: { leccion: 'l13' },
+  rampa: { leccion: 'l15' }, condensadora: { leccion: 'l18' }, atico: { leccion: 'l19' }, porton: { leccion: 'l14' },
+};
+const num = (v) => { const n = parseFloat(String(v ?? '').replace(',', '.')); return Number.isFinite(n) ? Math.min(1, Math.max(0, n)) : null; };
+const corto = (v) => String(Math.round(v * 1000) / 1000);
+function leerURL() {
+  const q = new URLSearchParams(location.search);
+  const h = new URLSearchParams(location.hash.replace(/^#/, ''));
+  const v = (k) => q.get(k) ?? h.get(k);
+  return { leccion: v('leccion'), sistema: v('sistema'), pieza: v('pieza'), corte: v('corte'), desp: v('desp'), mec: v('mec') ?? v('meca') };
+}
+function famDe(valor) {
+  if (!valor) return null;
+  const fams = [...new Set(registro.map((r) => r.fam))];
+  return fams.find((f) => f === valor) || fams.find((f) => clave(f) === clave(valor)) || null;
+}
+function indiceLeccion(valor) {
+  if (!valor) return -1;
+  const id = /^\d+$/.test(valor) ? `l${valor.padStart(2, '0')}` : valor.toLowerCase();
+  return DATOS.lecciones.findIndex((l) => l.id === id);
+}
+function restaurarURL() {
+  const u = leerURL();
+  restaurando = true;
+  try {
+    const alias = ALIAS[clave(u.pieza || '')] || {};
+    const i = indiceLeccion(u.leccion || alias.leccion);
+    if (i >= 0) abrirLeccion(i);
+    if (u.sistema || alias.sistema) abrirSistema(u.sistema || alias.sistema);
+    const fam = famDe(u.pieza) || alias.fam;
+    if (fam) abrirPieza(fam, i < 0);
+    const d = num(u.desp);
+    if (d !== null) ponerDespiece(d);
+    const c = /^([xyz])(?::([\d.,]+))?$/i.exec(u.corte || '');
+    if (c) {
+      ponerEje(c[1].toLowerCase());
+      corte = num(c[2]) ?? (eje === 'y' ? 0.17 : 0.5);
+      $('r-corte').value = corte;
+      aplicarCorte();
+    }
+    const m = num(u.mec);
+    if (m !== null) ponerMec(m);
+  } finally {
+    restaurando = false;
+  }
+  escribirURL();
+}
+function escribirURL() {
+  if (restaurando || !DATOS.lecciones.length) return;
+  const q = new URLSearchParams(location.search);
+  for (const k of CLAVES) q.delete(k);
+  const l = DATOS.lecciones[actual];
+  if (l) q.set('leccion', l.id);
+  if (estado.sistema) q.set('sistema', estado.sistema);
+  if (estado.pieza) q.set('pieza', clave(estado.pieza));
+  if (corte < 0.999) q.set('corte', `${eje}:${corto(corte)}`);
+  if (despiece > 0) q.set('desp', corto(despiece));
+  if (detalleRaiz.visible && mec > 0) q.set('mec', corto(mec));
+  // ?prueba va sin «=», como se escribe a mano, y los dos puntos de corte=z:0.5 sin codificar
+  const texto = q.toString().replace(/(^|&)prueba=(?=&|$)/, '$1prueba').replace(/%3A/gi, ':');
+  // el estado que vino en el hash ya pasó a la búsqueda; el resto del hash se respeta
+  const hash = /(^#|&)(leccion|pieza|sistema|corte|desp|mec|meca)=/.test(location.hash) ? '' : location.hash;
+  try { history.replaceState(null, '', location.pathname + (texto ? `?${texto}` : '') + hash); } catch (e) { /* sin historial */ }
+}
+$('copiar-enlace').addEventListener('click', async () => {
+  const b = $('copiar-enlace');
+  let ok = false;
+  try { await navigator.clipboard.writeText(location.href); ok = true; } catch (e) {
+    const t = document.createElement('textarea');
+    t.value = location.href;
+    document.body.appendChild(t);
+    t.select();
+    try { ok = document.execCommand('copy'); } catch (e2) { ok = false; }
+    t.remove();
+  }
+  b.textContent = ok ? 'Enlace copiado' : 'No se pudo copiar';
+  clearTimeout(b.t);
+  b.t = setTimeout(() => { b.textContent = 'Copiar enlace'; }, 2000);
 });
 
 // ---------------------------------------------------------------- tema
@@ -567,9 +697,13 @@ function bucle() {
   pintarLecciones();
   ficha({ codigo: 'Sistema completo', ...DATOS.edificio });
   aplicarCorte();
+  restaurarURL();
   $('carga').classList.add('fuera');
   if (new URLSearchParams(location.search).has('prueba')) {
-    window.__divisor = { registro, grupos, abrirLeccion, DATOS, camera, controls };
+    window.__divisor = {
+      registro, grupos, abrirLeccion, abrirSistema, abrirPieza, DATOS, camera, controls,
+      estado: () => ({ leccion: DATOS.lecciones[actual]?.id ?? null, ...estado, eje, corte, despiece, mec, detalle: detalleRaiz.visible ? detalleActivo?.clave : null }),
+    };
   }
 })().catch((e) => {
   $('carga').innerHTML = '<span class="mono">No se pudo cargar el dibujo. Abre la página desde un servidor local.</span>';
