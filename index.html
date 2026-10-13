@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D.I.Visor · Edificio 106</title>
+  <meta name="description" content="El Edificio 106 de Isthmus dibujado en línea y explicado desde el diseño industrial, de la pieza más sencilla al mecanismo más complejo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/divisor.css" />
+</head>
+<body>
+  <div id="lienzo" aria-label="Dibujo 3D del Edificio 106"></div>
+
+  <div class="marco" aria-hidden="true">
+    <span class="marco-a">D.I.VISOR · VISOR DE DISEÑO INDUSTRIAL · EDIFICIO 106 · ISTHMUS, CIUDAD DEL SABER</span>
+    <span class="marco-b" id="marco-escala">PERSPECTIVA · METROS</span>
+  </div>
+
+  <header class="barra">
+    <div class="marca">
+      <span class="marca-cuadro" aria-hidden="true"></span>
+      <div>
+        <span class="eyebrow">Laboratorio de diseño industrial</span>
+        <h1>D.I.Visor <span class="tenue">· Edificio 106 en línea</span></h1>
+      </div>
+    </div>
+    <nav class="vistas" aria-label="Vistas">
+      <button data-vista="todo" class="activo">Edificio</button>
+      <button data-vista="detalle" id="btn-detalle" disabled>Detalle</button>
+    </nav>
+  </header>
+
+  <aside class="panel panel-izq" id="panel-izq">
+    <div class="panel-cab">
+      <span class="eyebrow">Recorrido</span>
+      <span class="mono tenue" id="avance">00 / 00</span>
+    </div>
+    <p class="tenue pequeno">De la pieza más sencilla al mecanismo más complejo. Toca una lección o una pieza del dibujo.</p>
+    <ol class="lecciones" id="lecciones"></ol>
+  </aside>
+
+  <aside class="panel panel-der" id="ficha" aria-live="polite">
+    <div class="panel-cab">
+      <span class="eyebrow" id="f-codigo">Sistema completo</span>
+      <button class="enlace mono" id="f-todo">Ver todo</button>
+    </div>
+    <h2 id="f-titulo">El 106 como objeto</h2>
+    <p id="f-texto" class="cuerpo"></p>
+    <dl class="datos" id="f-datos"></dl>
+    <div class="bloque" id="f-principio-b">
+      <span class="eyebrow">Principio de diseño</span>
+      <p id="f-principio"></p>
+    </div>
+    <div class="bloque" id="f-mira-b">
+      <span class="eyebrow">Mira en el edificio</span>
+      <p id="f-mira"></p>
+    </div>
+    <p class="sello mono" id="f-sello"></p>
+  </aside>
+
+  <section class="controles" aria-label="Controles del dibujo">
+    <label>
+      <span>Despiece</span><span class="mono" id="v-desp">0 %</span>
+      <input id="r-desp" type="range" min="0" max="1" step="0.01" value="0" />
+    </label>
+    <label>
+      <span>Corte</span><span class="mono" id="v-corte">sin corte</span>
+      <input id="r-corte" type="range" min="0" max="1" step="0.005" value="1" />
+    </label>
+    <div class="ejes" role="group" aria-label="Plano de corte">
+      <button data-eje="z" class="activo" title="Corta a lo largo del edificio">Longitudinal</button>
+      <button data-eje="x" title="Corta a lo ancho del edificio">Transversal</button>
+      <button data-eje="y" title="Corta en horizontal y deja ver cada piso desde arriba">Planta</button>
+    </div>
+    <p class="ayuda" id="ayuda-corte">Elige un plano y el edificio se abre por ahí. Mueve «Corte» para correrlo.</p>
+    <label id="c-mec" hidden>
+      <span id="t-mec">Mecanismo</span><span class="mono" id="v-mec">0 %</span>
+      <input id="r-mec" type="range" min="0" max="1" step="0.01" value="0" />
+    </label>
+  </section>
+
+  <nav class="sistemas" id="sistemas" aria-label="Sistemas del edificio"></nav>
+
+  <div class="lectura" id="lectura" hidden>
+    <p class="mono" id="lec-vivo"></p>
+    <p id="lec-rotulo"></p>
+  </div>
+
+  <div class="carga" id="carga"><span class="mono">Cargando el dibujo…</span></div>
+
+  <script type="module" src="js/divisor.js"></script>
+</body>
+</html>

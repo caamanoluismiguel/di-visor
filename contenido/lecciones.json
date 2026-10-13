@@ -1,0 +1,2105 @@
+{
+  "niveles": {
+    "1": "Nivel 1 · Piezas simples",
+    "2": "Nivel 2 · Piezas que se repiten y ensamblan",
+    "3": "Nivel 3 · Componentes de varias piezas",
+    "4": "Nivel 4 · Sistemas y mecanismos",
+    "5": "Nivel 5 · El edificio como producto"
+  },
+  "edificio": {
+    "titulo": "El 106 como objeto",
+    "texto": "El Edificio 106 de Isthmus, en Ciudad del Saber, es un bloque de tres plantas con muros blancos, techo de teja a cuatro aguas y tres aleros corridos que lo rodean. Visto con ojos de diseño industrial es un producto armado con pocas familias de piezas que se repiten muchas veces: 78 ménsulas, 113 ventanas, 301 lamas, 624 cabios y unas 48.000 tejas. Este visor lo dibuja en línea a partir del modelo 3D del proyecto edificio-106, cuya escala tiene ±12 %, y separa siempre lo que se ve en foto de lo que el modelo supone.",
+    "datos": [
+      [
+        "Planta del muro",
+        "45,50 × 23,00 m"
+      ],
+      [
+        "Planta con aleros",
+        "48,80 × 26,30 m"
+      ],
+      [
+        "Plantas",
+        "3, de 3,65 m"
+      ],
+      [
+        "Cumbrera",
+        "15,64 a 15,73 m"
+      ],
+      [
+        "Vuelo de los aleros",
+        "1,65 m"
+      ]
+    ],
+    "principio": "Un objeto grande se entiende mejor como un conjunto de familias de piezas, cada una con su función, su material y su forma de unirse a las demás.",
+    "mira": "Mueve Despiece para separar los siete sistemas, de la base a las instalaciones.",
+    "certeza": "medido",
+    "fuente": "INVENTARIO §1; README.md del repo edificio-106 (escala ±12 %)"
+  },
+  "sistemas": {
+    "base": {
+      "titulo": "Base y suelo",
+      "texto": "El edificio se apoya en un zócalo macizo de 0,65 m en todo el perímetro. En las caras SE y NO lo perforan franjas de bloques calados, y en el extremo SO una galería elevada descansa sobre pilares. Las fotos confirman la base más alta que el terreno y los bloques calados; si ventilan un espacio bajo el piso y el tipo de cimentación no se saben.",
+      "datos": [
+        [
+          "Zócalo",
+          "45,50 × 23,00 m, 0,65 m de alto"
+        ],
+        [
+          "Bloques calados",
+          "77, uno cada 0,36 m"
+        ],
+        [
+          "Rejillas SO",
+          "3"
+        ]
+      ],
+      "principio": "Una base alta suele separar el cuerpo de un edificio del suelo húmedo y de la salpicadura de la lluvia.",
+      "mira": "Las franjas de bloques calados al pie de la fachada de la calle.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §3, §4.7 a §4.10"
+    },
+    "estructura": {
+      "titulo": "Losas y cartelas",
+      "texto": "Tres losas a 0,65, 4,30 y 7,95 m fijan una altura de entrepiso de 3,65 m. Los aleros se repiten con ese paso; ventanas y molduras también entre los pisos 2 y 3, pero las del piso 1 están 0,15 m más abajo (antepecho de 1,17 m contra 1,32). Las ménsulas blancas bajo los aleros aparecen en este grupo; el modelo no dice si cargan. El interior del modelo es un volumen de fondo sin medidas reales.",
+      "datos": [
+        [
+          "Entrepiso",
+          "3,65 m"
+        ],
+        [
+          "Ménsulas",
+          "78"
+        ],
+        [
+          "Pilares SO",
+          "3"
+        ]
+      ],
+      "principio": "Una altura de entrepiso constante convierte cada piso en un módulo que se apila.",
+      "mira": "Usa Corte longitudinal para ver las tres losas y los cielorrasos.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §1, §4.11, §4.15"
+    },
+    "muros": {
+      "titulo": "Muros",
+      "texto": "Muros blancos de 0,30 m de grueso en el modelo, de 0,65 a 11,60 m. De qué están hechos (bloque, concreto o ladrillo) no lo dice ninguna fuente del 106. Los atraviesan molduras finas bajo los alféizares y fajas oscuras sobre el arranque de cada mediagua.",
+      "datos": [
+        [
+          "Grueso",
+          "0,30 m"
+        ],
+        [
+          "Remate",
+          "11,60 m"
+        ],
+        [
+          "Molduras",
+          "11, de 5 × 6 cm"
+        ]
+      ],
+      "principio": "El muro es la superficie continua; las líneas horizontales le dan escala y marcan los pisos.",
+      "mira": "La línea fina bajo cada fila de ventanas.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.4, §4.5"
+    },
+    "ventanas": {
+      "titulo": "Ventanas y lamas",
+      "texto": "113 ventanas de aluminio, en pares en las fachadas largas, divididas en paños por parteluces y travesaños, más 38 paneles de lamas en ventanas sueltas. Las fotos confirman los pares de ventanas y paños con lamas; las de los pisos 2 y 3 son inferidas en el modelo, y no se sabe qué hojas abren ni si las lamas giran.",
+      "datos": [
+        [
+          "Ventanas",
+          "113"
+        ],
+        [
+          "Paneles de lamas",
+          "38, con 301 lamas"
+        ],
+        [
+          "Ventana típica SE",
+          "2,28 × 1,63 m"
+        ]
+      ],
+      "principio": "Una familia corta de perfiles resuelve ventanas de varios anchos.",
+      "mira": "Los pares de ventanas de la fachada SE y el muro angosto entre ellas.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.12, §4.13"
+    },
+    "cubierta": {
+      "titulo": "Cubierta",
+      "texto": "Techo a cuatro aguas con un gablete de ventilación en cada extremo corto y dos mediaguas corridas debajo. Cada alero vuela 1,65 m sobre cabios de madera oscura y ménsulas blancas. En el modelo hay unas 48.000 tejas; el número real, el tamaño y la pendiente real no están medidos.",
+      "datos": [
+        [
+          "Pendiente del modelo",
+          "17,8° (32 %)"
+        ],
+        [
+          "Cabios",
+          "624"
+        ],
+        [
+          "Tejas en el modelo",
+          "~48.000"
+        ]
+      ],
+      "principio": "El mismo alero, repetido en cada piso, sombrea y aleja el agua de la fachada de abajo.",
+      "mira": "Los tres aleros superpuestos en la esquina del jardín.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §2, §4.1, §4.2, §4.16"
+    },
+    "accesos": {
+      "titulo": "Accesos",
+      "texto": "La entrada principal del SE combina un pórtico de tres columnas, una escalera de siete peldaños y una rampa de dos tramos con descanso. Hay además escaleras de servicio, una galería elevada en el extremo SO y puertas pardas. Salvo los siete peldaños contados en foto, las cotas son inferidas.",
+      "datos": [
+        [
+          "Peldaños de la entrada",
+          "7 (contados en foto)"
+        ],
+        [
+          "Rampa",
+          "2 tramos de 5,90 m"
+        ],
+        [
+          "Vanos de puerta",
+          "5 en el modelo"
+        ]
+      ],
+      "principio": "Un mismo desnivel se resuelve de dos formas: peldaños para quien sube a pie y rampa para quien no puede.",
+      "mira": "La rampa adosada a la fachada, a la derecha del pórtico.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.21 a §4.25"
+    },
+    "servicios": {
+      "titulo": "Instalaciones",
+      "texto": "Condensadoras de aire acondicionado al pie del muro, un gabinete verde con aletas, tubos verticales con abrazaderas, dos mástiles en el techo y la señalización del jardín. Las condensadoras están confirmadas en foto; las fotos muestran más unidades que las 15 del modelo.",
+      "datos": [
+        [
+          "Condensadoras",
+          "15 en el modelo"
+        ],
+        [
+          "Abrazaderas",
+          "48"
+        ],
+        [
+          "Mástiles",
+          "2, hasta 17,00 m"
+        ]
+      ],
+      "principio": "Lo que se fija por fuera queda a la vista y se puede mantener sin abrir el muro.",
+      "mira": "Las cajas con rejilla redonda al pie de la fachada NO.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.19, §4.20, §4.26 a §4.28"
+    }
+  },
+  "piezas": {
+    "Exposed timber rafter": {
+      "titulo": "Cabio del alero",
+      "texto": "Vigueta de madera oscura que sostiene el tablero del alero. El modelo tiene 624, una cada 0,65 m, bajo los tres aleros. Las fotos muestran maderos oscuros bajo los aleros; su número, paso y sección no están medidos.",
+      "datos": [
+        [
+          "Cantidad",
+          "624"
+        ],
+        [
+          "Sección",
+          "7 × 11 cm"
+        ],
+        [
+          "Largo",
+          "1,65 m"
+        ],
+        [
+          "Paso",
+          "0,65 m"
+        ]
+      ],
+      "principio": "Muchas piezas iguales y cortas reparten la carga del alero en lugar de una sola pieza grande.",
+      "mira": "La fila de cabios bajo cualquier alero.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.2; fotos del 106 (archivo de LM, no publicado)"
+    },
+    "Photo-matched white haunch": {
+      "titulo": "Ménsula",
+      "texto": "Escuadra blanca bajo cada alero. En la fachada SE, las seis del centro van sobre el muro angosto entre las dos ventanas de un par. En las esquinas van dos, en V. El modelo no dice si cargan o son decorativas.",
+      "datos": [
+        [
+          "Cantidad",
+          "78 (26 por alero)"
+        ],
+        [
+          "Medida",
+          "0,26 × 0,82 m, vuelo 1,50 m"
+        ],
+        [
+          "Paso en la SE",
+          "6,70 m (las seis del centro)"
+        ]
+      ],
+      "principio": "La forma triangular lleva la carga del vuelo hacia el muro.",
+      "mira": "Las ménsulas en V de las esquinas.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.15; fotos del 106 (archivo de LM, no publicado)"
+    },
+    "Level 1 tiled sunshade substrate": {
+      "titulo": "Tablero de la mediagua 1",
+      "texto": "Superficie inclinada que recibe las tejas de la primera mediagua, con el sofito a 3,734 m. En el visor las tejas se dibujan como un rayado esquemático sobre este tablero.",
+      "datos": [
+        [
+          "Altura",
+          "3,80 a 4,48 m"
+        ],
+        [
+          "Pendiente",
+          "17,9° en el modelo"
+        ]
+      ],
+      "principio": "La teja necesita un plano continuo y con pendiente para que el agua corra.",
+      "mira": "El rayado de tejas sobre el primer alero.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §2, §4.16"
+    },
+    "Level 2 tiled sunshade substrate": {
+      "titulo": "Tablero de la mediagua 2",
+      "texto": "Igual a la primera mediagua, un piso más arriba, con el sofito a 7,386 m.",
+      "datos": [
+        [
+          "Altura",
+          "7,45 a 8,13 m"
+        ],
+        [
+          "Pendiente",
+          "17,9° en el modelo"
+        ]
+      ],
+      "principio": "Repetir el mismo componente en cada piso simplifica el diseño y la obra.",
+      "mira": "El segundo alero.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §2, §4.16"
+    },
+    "Level 1 tiled sunshade fascia": {
+      "titulo": "Tabla de frente, alero 1",
+      "texto": "Tabla de madera oscura que cierra el canto del alero de la primera mediagua.",
+      "datos": [
+        [
+          "Alto",
+          "0,14 m"
+        ],
+        [
+          "Grueso",
+          "0,10 m"
+        ]
+      ],
+      "principio": "La tabla de frente oculta las cabezas de los cabios y da un borde recto al alero.",
+      "mira": "El canto oscuro del primer alero.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §2"
+    },
+    "Level 2 tiled sunshade fascia": {
+      "titulo": "Tabla de frente, alero 2",
+      "texto": "Tabla de frente del segundo alero, igual a la del primero.",
+      "datos": [
+        [
+          "Alto",
+          "0,14 m"
+        ],
+        [
+          "Grueso",
+          "0,10 m"
+        ]
+      ],
+      "principio": "La misma sección en todos los aleros permite un solo perfil de madera.",
+      "mira": "El canto del segundo alero.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §2"
+    },
+    "Main lower hipped roof fascia": {
+      "titulo": "Tabla de frente del techo principal",
+      "texto": "Tabla de frente del alero del techo principal, con el canto de la teja a 11,148 m.",
+      "datos": [
+        [
+          "Alto",
+          "0,14 m"
+        ],
+        [
+          "Canto de la teja",
+          "11,148 m"
+        ]
+      ],
+      "principio": "El borde del techo alto repite el de las mediaguas.",
+      "mira": "El canto del alero más alto.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §1, §2"
+    },
+    "Main roof outer eave": {
+      "titulo": "Alero del techo principal",
+      "texto": "Tablero del alero alto, de 11,10 a 11,79 m, que vuela 1,65 m como los otros dos.",
+      "datos": [
+        [
+          "Altura",
+          "11,10 a 11,79 m"
+        ],
+        [
+          "Vuelo",
+          "1,65 m"
+        ]
+      ],
+      "principio": "El vuelo del alero aleja el agua del muro y sombrea las ventanas del piso 3.",
+      "mira": "El alero sobre las ventanas del piso 3.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §2, §4.16"
+    },
+    "Main roof upper hip": {
+      "titulo": "Faldones del techo principal",
+      "texto": "Los cuatro faldones del techo a cuatro aguas, de 11,99 a 14,61 m. Encierran el ático.",
+      "datos": [
+        [
+          "Planta",
+          "44,74 × 22,24 m"
+        ],
+        [
+          "Pendiente",
+          "17,8° (32 %)"
+        ]
+      ],
+      "principio": "Cuatro aguas reparten la lluvia en las cuatro caras y protegen los cuatro muros.",
+      "mira": "Las limas en las esquinas del techo.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §2"
+    },
+    "Main roof continuous step fascia": {
+      "titulo": "Faja de arcilla del ático",
+      "texto": "Franja vertical terracota bajo el techo alto, 0,38 m hacia adentro del muro. Se ve en una foto del 106.",
+      "datos": [
+        [
+          "Alto",
+          "0,26 m"
+        ],
+        [
+          "Cota",
+          "11,78 a 12,04 m"
+        ]
+      ],
+      "principio": "Una franja de color marca el cambio entre muro y techo.",
+      "mira": "La franja terracota bajo el techo alto.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.17; foto del 106 (archivo de LM, no publicado)"
+    },
+    "Main ridge cap": {
+      "titulo": "Cumbrera",
+      "texto": "Remate del encuentro de los faldones en lo alto del techo.",
+      "datos": [
+        [
+          "Largo",
+          "unos 28,7 m"
+        ],
+        [
+          "Remate",
+          "15,54 a 15,73 m"
+        ]
+      ],
+      "principio": "La cumbrera cubre la junta más alta, donde no puede haber solape de faldón.",
+      "mira": "La línea más alta del techo.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §1, §2"
+    },
+    "Gabled roof monitor": {
+      "titulo": "Hueco del gablete de ventilación",
+      "texto": "Abertura triangular en lo alto de cada extremo corto del techo. La del NE está en foto; la del SO se extrapoló. Si tiene malla no se sabe.",
+      "datos": [
+        [
+          "Cantidad",
+          "2"
+        ],
+        [
+          "Base × alto",
+          "6,20 × 0,99 m"
+        ],
+        [
+          "Cota",
+          "14,61 a 15,60 m"
+        ]
+      ],
+      "principio": "Una abertura alta deja salir el aire caliente del ático.",
+      "mira": "El triángulo oscuro en lo alto del testero NE.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.18; foto del 106 (archivo de LM, no publicado)"
+    },
+    "Monitor bargeboard": {
+      "titulo": "Marco del gablete",
+      "texto": "Maderos oscuros que enmarcan el triángulo del gablete.",
+      "datos": [
+        [
+          "Cantidad",
+          "4"
+        ],
+        [
+          "Largo",
+          "unos 3,3 m"
+        ]
+      ],
+      "principio": "El marco protege el borde del hueco y lo hace legible.",
+      "mira": "El borde del triángulo del gablete.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.18; foto del 106 (archivo de LM, no publicado)"
+    },
+    "vent central timber": {
+      "titulo": "Montante del gablete",
+      "texto": "Madero vertical en el eje del hueco del gablete.",
+      "datos": [
+        [
+          "Sección",
+          "8 × 8 cm"
+        ],
+        [
+          "Cota",
+          "14,61 a 15,53 m"
+        ]
+      ],
+      "principio": "El montante divide la luz del hueco.",
+      "mira": "La línea vertical dentro del gablete.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.18; foto del 106 (archivo de LM, no publicado)"
+    },
+    "vent cross timber": {
+      "titulo": "Travesaño del gablete",
+      "texto": "Madero horizontal que cruza el hueco del gablete.",
+      "datos": [
+        [
+          "Largo",
+          "3,40 m"
+        ],
+        [
+          "Cota",
+          "14,92 a 14,99 m"
+        ]
+      ],
+      "principio": "Montante y travesaño dividen el hueco en partes más pequeñas.",
+      "mira": "La línea horizontal dentro del gablete.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.18; foto del 106 (archivo de LM, no publicado)"
+    },
+    "solid wall": {
+      "titulo": "Muro con repello",
+      "texto": "Muro blanco de 0,30 m de grueso. El material del muro no lo dice ninguna fuente del 106.",
+      "datos": [
+        [
+          "Grueso",
+          "0,30 m"
+        ],
+        [
+          "Altura",
+          "0,65 a 11,60 m"
+        ]
+      ],
+      "principio": "Un muro continuo y liso concentra la atención en los vanos y las sombras.",
+      "mira": "Los paños de muro entre ventanas.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.4"
+    },
+    "continuous sill band": {
+      "titulo": "Moldura bajo las ventanas",
+      "texto": "Moldura fina corrida a lo largo del muro justo bajo los alféizares de cada piso.",
+      "datos": [
+        [
+          "Cantidad",
+          "11"
+        ],
+        [
+          "Sección",
+          "5 × 6 cm"
+        ],
+        [
+          "Cotas",
+          "1,66 · 5,46 · 9,11 m"
+        ]
+      ],
+      "principio": "Una línea de sombra horizontal da escala al muro y disimula juntas.",
+      "mira": "La línea bajo cada fila de ventanas.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.5"
+    },
+    "eave wall band": {
+      "titulo": "Faja sobre la mediagua",
+      "texto": "Banda parda oscura contra el muro sobre el arranque de cada mediagua. Se ve en todas las fotos; si es madera o pintura no se sabe.",
+      "datos": [
+        [
+          "Cantidad",
+          "8"
+        ],
+        [
+          "Alto",
+          "0,27 m"
+        ]
+      ],
+      "principio": "La faja cubre el encuentro entre el tablero de la mediagua y el muro.",
+      "mira": "La banda oscura sobre cada alero.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.3"
+    },
+    "window sill": {
+      "titulo": "Alféizar",
+      "texto": "Pieza bajo cada ventana, de 2 a 4 cm más ancha que ella.",
+      "datos": [
+        [
+          "Cantidad",
+          "113"
+        ],
+        [
+          "Alto × fondo",
+          "5 × 34 cm"
+        ]
+      ],
+      "principio": "El alféizar saca el agua del vidrio fuera del plano del muro.",
+      "mira": "El borde claro bajo cada ventana.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.6"
+    },
+    "window jamb": {
+      "titulo": "Jamba del marco",
+      "texto": "Perfil vertical del borde del marco de la ventana. Las fotos muestran marcos de aluminio claro.",
+      "datos": [
+        [
+          "Perfil",
+          "4 × 9 cm"
+        ]
+      ],
+      "principio": "Un perfil de sección constante se corta a medida para cualquier ancho de ventana.",
+      "mira": "Los bordes de los marcos.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.12"
+    },
+    "window mullion": {
+      "titulo": "Parteluz",
+      "texto": "Perfil vertical que divide la ventana en dos paños.",
+      "datos": [
+        [
+          "Perfil",
+          "4 × 9 cm"
+        ]
+      ],
+      "principio": "El parteluz reduce la luz de cada vidrio y lo hace más pequeño y manejable.",
+      "mira": "La línea vertical al centro de cada ventana.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.12"
+    },
+    "window transom": {
+      "titulo": "Travesaño",
+      "texto": "Perfil horizontal a media altura que, con el parteluz, divide la ventana típica en 4 paños.",
+      "datos": [
+        [
+          "Perfil",
+          "4 × 9 cm"
+        ],
+        [
+          "Paño típico",
+          "1,08 × 0,74 m"
+        ]
+      ],
+      "principio": "La retícula de perfiles permite usar vidrios de un solo tamaño.",
+      "mira": "La línea horizontal a media altura de cada ventana.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.12"
+    },
+    "individual pane": {
+      "titulo": "Paño de vidrio",
+      "texto": "Vidrio de un paño, 9 a 10 cm hacia adentro del muro.",
+      "datos": [
+        [
+          "Paño típico SE",
+          "1,08 × 0,74 m"
+        ],
+        [
+          "Paños en el modelo",
+          "400"
+        ]
+      ],
+      "principio": "Retrasar el vidrio respecto al muro le da sombra y protección.",
+      "mira": "Los cuatro paños de cada ventana de la calle.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.12"
+    },
+    "window observed lower louvre": {
+      "titulo": "Lama de celosía",
+      "texto": "Lama horizontal de un panel de 8 lamas que tapa media ventana. Las fotos muestran paños con lamas; no se sabe si son de vidrio o de aluminio ni si giran.",
+      "datos": [
+        [
+          "Lamas",
+          "280 en 35 paneles"
+        ],
+        [
+          "Alto × fondo",
+          "9 a 10 × 7 cm"
+        ],
+        [
+          "Paso",
+          "9,3 cm"
+        ]
+      ],
+      "principio": "Muchas lamas iguales y delgadas filtran luz y aire con una sola pieza repetida.",
+      "mira": "Los paños rayados en ventanas sueltas.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.13"
+    },
+    "window lower louvre": {
+      "titulo": "Lama de la planta baja SO",
+      "texto": "Lamas de los 3 paneles de 7 lamas en las ventanas de la planta baja SO.",
+      "datos": [
+        [
+          "Lamas",
+          "21 en 3 paneles"
+        ],
+        [
+          "Cota",
+          "2,08 a 2,70 m"
+        ]
+      ],
+      "principio": "La misma lama sirve en paneles de distinta altura cambiando solo el número de piezas.",
+      "mira": "Las ventanas bajas del testero SO.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.13"
+    },
+    "window observed lower infill": {
+      "titulo": "Tablero liso en ventana",
+      "texto": "Tablero liso en la fachada NE, piso 2, en lugar de paños de vidrio.",
+      "datos": [
+        [
+          "Cota",
+          "5,62 a 6,34 m"
+        ]
+      ],
+      "principio": "Un vano puede cerrarse con un panel opaco del mismo módulo.",
+      "mira": "El tablero en la NE, piso 2.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.13, §4.14"
+    },
+    "window round board vent": {
+      "titulo": "Hueco en el tablero",
+      "texto": "Panel de madera con un hueco pequeño, en la NE, piso 2. Qué hay detrás no está confirmado.",
+      "datos": [
+        [
+          "Hueco",
+          "0,16 × 0,16 m"
+        ]
+      ],
+      "principio": "Un vano puede cerrarse con un tablero en lugar de vidrio.",
+      "mira": "El hueco del tablero en la NE.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.14"
+    },
+    "window vent mullion": {
+      "titulo": "Montante de las ventanas altas NE",
+      "texto": "Perfiles de las dos ventanas altas y pequeñas de la NE, piso 1.",
+      "datos": [
+        [
+          "Cota",
+          "2,84 a 3,41 m"
+        ]
+      ],
+      "principio": "Una ventana alta da luz y aire sin quitar muro útil abajo.",
+      "mira": "Las ventanas altas del piso 1 en la NE.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.12"
+    },
+    "Foundation": {
+      "titulo": "Zócalo",
+      "texto": "Base maciza en todo el perímetro. Las fotos confirman una base más alta que el terreno; su altura real no está medida.",
+      "datos": [
+        [
+          "Planta",
+          "45,50 × 23,00 m"
+        ],
+        [
+          "Alto",
+          "0,65 m"
+        ]
+      ],
+      "principio": "La base aleja del suelo la salpicadura de la lluvia.",
+      "mira": "La franja baja bajo las ventanas del piso 1.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.7"
+    },
+    "Foundation vent recess": {
+      "titulo": "Hueco del bloque calado",
+      "texto": "Hueco oscuro de cada bloque calado de la base.",
+      "datos": [
+        [
+          "Cantidad",
+          "77"
+        ],
+        [
+          "Hueco",
+          "0,32 × 0,28 m"
+        ],
+        [
+          "Paso",
+          "0,36 m"
+        ]
+      ],
+      "principio": "Una abertura fija repetida deja pasar aire sin piezas móviles.",
+      "mira": "La franja calada junto a la entrada.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.8"
+    },
+    "Foundation lattice corner": {
+      "titulo": "Cuadro del bloque calado",
+      "texto": "Cuatro cuadros claros delante de cada hueco forman el dibujo del calado. El dibujo real no está confirmado.",
+      "datos": [
+        [
+          "Cantidad",
+          "308 (4 por bloque)"
+        ],
+        [
+          "Medida",
+          "12 × 12 cm"
+        ]
+      ],
+      "principio": "El calado divide el hueco en partes pequeñas que dejan pasar aire y frenan objetos.",
+      "mira": "Los cuadros claros de la base.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.8"
+    },
+    "recessed plinth vent": {
+      "titulo": "Rejilla de la galería SO",
+      "texto": "Hueco de las 3 rejillas del frente de la galería SO.",
+      "datos": [
+        [
+          "Cantidad",
+          "3"
+        ],
+        [
+          "Hueco",
+          "0,54 × 0,44 m"
+        ]
+      ],
+      "principio": "Una rejilla empotrada ventila el espacio bajo una plataforma.",
+      "mira": "Las tres rejillas al pie de la galería SO.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.9"
+    },
+    "rust brown vent slat": {
+      "titulo": "Barrote de rejilla",
+      "texto": "Barrotes pardos de las rejillas de la galería SO, 7 por rejilla.",
+      "datos": [
+        [
+          "Cantidad",
+          "21"
+        ],
+        [
+          "Medida",
+          "0,06 × 0,02 × 0,50 m"
+        ]
+      ],
+      "principio": "Barrotes delgados en el sentido del alto dejan el máximo de hueco.",
+      "mira": "Las rejillas del testero SO.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.9"
+    },
+    "drainage recess": {
+      "titulo": "Franja oscura junto a la escalera SO",
+      "texto": "Franja oscura entre bordillos. Podría ser una canaleta; no está confirmado.",
+      "datos": [
+        [
+          "Medida",
+          "0,22 × 4,70 m"
+        ]
+      ],
+      "principio": "Una canaleta lineal recoge el agua de una superficie dura.",
+      "mira": "La franja junto a la escalera paralela al muro SO.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.31"
+    },
+    "Floor slab": {
+      "titulo": "Canto de losa",
+      "texto": "Placas que marcan el canto de cada losa en el modelo.",
+      "datos": [
+        [
+          "Cotas",
+          "0,54 · 4,19 · 7,84 · 11,49 m"
+        ],
+        [
+          "Grueso",
+          "0,22 m"
+        ]
+      ],
+      "principio": "La losa repetida cada 3,65 m es el módulo vertical del edificio.",
+      "mira": "Usa Corte para ver las losas.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.11"
+    },
+    "open-bay pier": {
+      "titulo": "Pilar expuesto",
+      "texto": "Pilares bajo el borde de la galería SO, visibles en fotos del 106. Su sección no está medida.",
+      "datos": [
+        [
+          "Cantidad",
+          "3"
+        ],
+        [
+          "Sección",
+          "0,38 × 0,30 m"
+        ],
+        [
+          "Separación",
+          "unos 2,3 m"
+        ]
+      ],
+      "principio": "Apoyos puntuales dejan un hueco abierto bajo una plataforma.",
+      "mira": "Los pilares bajo la galería, cerca de la esquina oeste.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.10"
+    },
+    "Interior light strip": {
+      "titulo": "Luminaria interior",
+      "texto": "Tres luminarias del modelo detrás del vidrio SE. Son un supuesto del modelo, sin foto.",
+      "datos": [
+        [
+          "Cantidad",
+          "3"
+        ],
+        [
+          "Medida",
+          "1,20 × 0,12 m"
+        ]
+      ],
+      "principio": "Una luz interior cerca del techo se lee desde fuera como parte de la fachada de noche.",
+      "mira": "Detrás del vidrio SE, pisos 2 y 3.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.29"
+    },
+    "entrada:Galvanized guardrail": {
+      "titulo": "Barandas de la rampa",
+      "texto": "Tubos de la baranda de la rampa y tiradores de la puerta principal. La baranda se ve metálica y clara en la foto.",
+      "datos": [
+        [
+          "Pasamanos",
+          "Ø 5,4 cm"
+        ],
+        [
+          "Travesaños",
+          "Ø 3,6 cm"
+        ],
+        [
+          "Postes",
+          "cada 0,98 m"
+        ]
+      ],
+      "principio": "La mano necesita un tubo que pueda rodear y que no se interrumpa.",
+      "mira": "La baranda de la rampa junto a la entrada.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.24; fuente/barandas.mjs del repo edificio-106"
+    },
+    "entrada:Pale cast concrete — entrance": {
+      "titulo": "Escalera y rampa de la entrada",
+      "texto": "Peldaños y rampa de concreto de la entrada principal. Los 7 peldaños están contados en una foto del 106; las cotas de la rampa son inferidas.",
+      "datos": [
+        [
+          "Peldaños",
+          "7"
+        ],
+        [
+          "Rampa",
+          "8,1 %"
+        ]
+      ],
+      "principio": "Escalera y rampa llegan al mismo rellano por caminos distintos.",
+      "mira": "La escalera bajo el pórtico y la rampa a su derecha.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.22, §4.24; fuente/verificacion/entrada/comparativa-entrada.png del repo edificio-106 (recorte de una foto del 106)"
+    },
+    "entrada:Fresh cream trim": {
+      "titulo": "Columnas del pórtico",
+      "texto": "Columnas blancas cuadradas del pórtico, con basa, fuste y capitel, y bordillos de la rampa.",
+      "datos": [
+        [
+          "Columnas",
+          "3"
+        ],
+        [
+          "Entre ejes",
+          "2,20 m"
+        ],
+        [
+          "Fuste",
+          "0,38 × 0,38 m"
+        ]
+      ],
+      "principio": "La columna se ensancha abajo y arriba para repartir la carga en sus apoyos.",
+      "mira": "Las columnas del pórtico.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.25; fuente/portico.mjs del repo edificio-106"
+    },
+    "entrada:Dark stained roof timber": {
+      "titulo": "Maderas del pórtico",
+      "texto": "Zapatas, vigas y cinco cabios de madera oscura del pórtico.",
+      "datos": [
+        [
+          "Cabios",
+          "5, de 8 × 10 cm"
+        ],
+        [
+          "Paso",
+          "0,60 m"
+        ]
+      ],
+      "principio": "La zapata alarga el apoyo de la viga sobre la columna.",
+      "mira": "La banda de madera oscura del pórtico.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.25; fuente/portico.mjs del repo edificio-106"
+    },
+    "entrada:Clay terracotta": {
+      "titulo": "Tejas del pórtico",
+      "texto": "Tejas del pequeño techo del pórtico. Su cuenta es menos fiable que la del resto.",
+      "datos": [
+        [
+          "Tejas",
+          "~460"
+        ],
+        [
+          "Pendiente al frente",
+          "19,4°"
+        ]
+      ],
+      "principio": "El pórtico repite a escala menor la cubierta del edificio.",
+      "mira": "El techo de teja sobre la entrada.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.1, §4.25; fuente/portico.mjs del repo edificio-106"
+    },
+    "entrada:106 sign blue": {
+      "titulo": "Letrero 106",
+      "texto": "Tótem gris con la parte de arriba azul junto a la rampa. El real es curvo; el modelo casi plano.",
+      "datos": [
+        [
+          "Panel",
+          "1,64 m de ancho"
+        ],
+        [
+          "Alto",
+          "hasta 2,79 m"
+        ]
+      ],
+      "principio": "Una señal de entrada se lee mejor cuando su cara mira hacia quien llega.",
+      "mira": "El tótem junto al pie de la rampa.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.26"
+    },
+    "rear service door": {
+      "titulo": "Puerta de servicio parda",
+      "texto": "Hojas pardas con tres listones verticales en las fachadas SE y NO. Existen en foto; el número de hojas está en duda.",
+      "datos": [
+        [
+          "Alto",
+          "2,54 m"
+        ],
+        [
+          "Anchos",
+          "1,50 · 1,70 · 1,80 m"
+        ]
+      ],
+      "principio": "En una hoja plana, los listones suelen servir para rigidizarla contra el alabeo.",
+      "mira": "Las puertas pardas de la fachada NO.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.21 b"
+    },
+    "far-end brown door": {
+      "titulo": "Puerta de la galería SO",
+      "texto": "Hoja parda en el testero SO a nivel de la galería.",
+      "datos": [
+        [
+          "Hoja",
+          "1,26 × 2,07 m"
+        ]
+      ],
+      "principio": "La puerta se alinea con la escalera que llega a ella.",
+      "mira": "La puerta frente a la escalera perpendicular del SO.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.21 c"
+    },
+    "door handle": {
+      "titulo": "Manija de la puerta SO",
+      "texto": "Manija pequeña de la puerta de la galería SO.",
+      "datos": [
+        [
+          "Cota",
+          "2,22 a 2,24 m (0,94 m sobre la galería)"
+        ]
+      ],
+      "principio": "La manija se pone a la altura de la mano, medida desde el piso que se pisa.",
+      "mira": "La puerta de la galería SO.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.21 c; caja de la familia en modelo/edificio_piezas.glb"
+    },
+    "Brown access tread": {
+      "titulo": "Escalones de servicio pardos",
+      "texto": "Bloques escalonados frente a las puertas pardas de la SE y la NO, con pasamanos inclinados.",
+      "datos": [
+        [
+          "Alto",
+          "0,80 m"
+        ],
+        [
+          "Fondo",
+          "1,57 m"
+        ]
+      ],
+      "principio": "Un bloque de escalones se fabrica como una sola pieza y se coloca frente a la puerta.",
+      "mira": "La escalera parda frente a la puerta SE.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.22 b"
+    },
+    "rear replacement step": {
+      "titulo": "Escalera trasera NO",
+      "texto": "Escalera de 8 peldaños hacia la galería NO. Existe en foto; las cotas son inferidas.",
+      "datos": [
+        [
+          "Peldaños",
+          "8"
+        ],
+        [
+          "Contrahuella",
+          "0,16 m"
+        ],
+        [
+          "Huella",
+          "0,30 a 0,32 m"
+        ]
+      ],
+      "principio": "Peldaños iguales permiten al pie repetir el mismo gesto sin mirar.",
+      "mira": "La escalera de la fachada NO.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.22 c"
+    },
+    "front stair brown tread": {
+      "titulo": "Escalera SO paralela al muro",
+      "texto": "Escalera de 9 peldaños paralela al muro SO.",
+      "datos": [
+        [
+          "Peldaños",
+          "9"
+        ],
+        [
+          "Contrahuella",
+          "unos 0,14 m"
+        ],
+        [
+          "Huella",
+          "0,31 m"
+        ]
+      ],
+      "principio": "Una escalera paralela al muro ocupa poco frente.",
+      "mira": "La escalera de la esquina sur.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.22 d"
+    },
+    "quadrangle stair tread": {
+      "titulo": "Escalera SO perpendicular",
+      "texto": "Escalera de 8 peldaños que sale perpendicular al testero SO, frente a su puerta.",
+      "datos": [
+        [
+          "Peldaños",
+          "8"
+        ],
+        [
+          "Contrahuella",
+          "0,16 m"
+        ],
+        [
+          "Huella",
+          "0,30 m"
+        ]
+      ],
+      "principio": "Contrahuellas claras y huellas de otro material marcan el borde de cada peldaño.",
+      "mira": "La escalera frente a la puerta SO.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.22 e"
+    },
+    "rear corridor finish": {
+      "titulo": "Piso de la galería NO",
+      "texto": "Piso del tramo NO de la galería elevada.",
+      "datos": [
+        [
+          "Ancho",
+          "1,30 m"
+        ],
+        [
+          "Largo",
+          "22,45 m"
+        ],
+        [
+          "Cota",
+          "1,24 a 1,28 m"
+        ]
+      ],
+      "principio": "Una plataforma corrida reúne accesos en un solo nivel.",
+      "mira": "La galería de la esquina oeste.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.23"
+    },
+    "end corridor finish": {
+      "titulo": "Piso de la galería SO",
+      "texto": "Piso del tramo SO de la galería elevada.",
+      "datos": [
+        [
+          "Ancho",
+          "1,70 m"
+        ],
+        [
+          "Largo",
+          "20,0 m"
+        ],
+        [
+          "Cota",
+          "1,24 a 1,28 m"
+        ]
+      ],
+      "principio": "La galería pone el acceso a la altura de la puerta SO.",
+      "mira": "La galería del testero SO.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.23"
+    },
+    "Condenser housing": {
+      "titulo": "Caja de la condensadora",
+      "texto": "Caja de la unidad exterior de aire acondicionado tipo split. Confirmado en foto; las fotos muestran más unidades que el modelo.",
+      "datos": [
+        [
+          "Cantidad",
+          "15 en el modelo"
+        ],
+        [
+          "Caja",
+          "0,91 × 0,62 × 0,44 m"
+        ]
+      ],
+      "principio": "La carcasa protege el equipo y conduce el aire por un solo camino.",
+      "mira": "Las cajas al pie de la fachada NO.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.27"
+    },
+    "Condenser fan recess": {
+      "titulo": "Rejilla del ventilador",
+      "texto": "Hueco del ventilador con rejilla de anillos concéntricos. El ventilador gira detrás; no está modelado.",
+      "datos": [
+        [
+          "Hueco",
+          "0,50 × 0,50 m"
+        ],
+        [
+          "Anillos",
+          "5, de 0,48 a 0,14 m"
+        ]
+      ],
+      "principio": "La rejilla deja pasar el aire y aleja los dedos de las aspas.",
+      "mira": "La cara redonda de cada condensadora.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.27"
+    },
+    "Condenser side grille": {
+      "titulo": "Celosía del frente de la condensadora",
+      "texto": "Celosía en el frente de la caja, junto al hueco del ventilador.",
+      "datos": [
+        [
+          "Medida",
+          "0,15 × 0,36 m"
+        ]
+      ],
+      "principio": "Una celosía de lamas deja pasar el aire y protege lo que hay detrás de golpes y lluvia.",
+      "mira": "El frente de cada condensadora, al lado de la rejilla redonda.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.27"
+    },
+    "Green utility transformer": {
+      "titulo": "Gabinete verde",
+      "texto": "Gabinete verde grande delante de la fachada NO. Parece un transformador tipo pedestal; no está confirmado.",
+      "datos": [
+        [
+          "Cuerpo",
+          "1,54 × 1,70 × 1,10 m"
+        ]
+      ],
+      "principio": "Un gabinete cerrado protege equipos eléctricos de la lluvia y del contacto.",
+      "mira": "El volumen verde frente a la fachada NO.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.28"
+    },
+    "Utility cabinet cooling fin": {
+      "titulo": "Aletas del gabinete",
+      "texto": "Aletas verticales en un costado del gabinete verde.",
+      "datos": [
+        [
+          "Cantidad",
+          "17"
+        ],
+        [
+          "Paso",
+          "7,5 cm"
+        ],
+        [
+          "Largo",
+          "1,26 m"
+        ]
+      ],
+      "principio": "Las aletas multiplican la superficie que cede calor al aire.",
+      "mira": "El costado con aletas del gabinete verde.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.28"
+    },
+    "Small pipe strap": {
+      "titulo": "Abrazadera de tubo",
+      "texto": "Abrazaderas que fijan los 12 tubos verticales al muro, 4 por tubo.",
+      "datos": [
+        [
+          "Cantidad",
+          "48"
+        ],
+        [
+          "Cotas",
+          "0,80 · 2,60 · 5,50 · 9,20 m"
+        ]
+      ],
+      "principio": "Fijaciones puntuales sujetan el tubo sin impedir que se dilate.",
+      "mira": "Los tubos de la fachada NO.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.19"
+    },
+    "Roof antenna": {
+      "titulo": "Mástil de antena",
+      "texto": "Mástiles sobre el techo, visibles en varias fotos. Su altura y posición exactas no están medidas.",
+      "datos": [
+        [
+          "Cantidad",
+          "2"
+        ],
+        [
+          "Cota",
+          "12,50 a 17,00 m"
+        ]
+      ],
+      "principio": "Un tubo delgado alcanza altura con poco peso y poca área al viento.",
+      "mira": "Los dos tubos sobre el techo.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.20"
+    },
+    "Garden wayfinding panel": {
+      "titulo": "Poste de señalización del jardín",
+      "texto": "Tótem gris y azul con flechas en el jardín NE. Existe en foto; su posición es inferida.",
+      "datos": [
+        [
+          "Panel",
+          "1,02 m de ancho"
+        ],
+        [
+          "Alto",
+          "hasta 3,20 m"
+        ]
+      ],
+      "principio": "La señal de orientación se lee de lejos por su franja de color.",
+      "mira": "El tótem del jardín NE.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.26 b"
+    }
+  },
+  "lecciones": [
+    {
+      "id": "l01",
+      "nivel": "1",
+      "titulo": "Canal y cobija",
+      "sub": "La teja curva y sus dos posiciones",
+      "piezas": [
+        "sunshade substrate",
+        "^Main roof upper hip$",
+        "^Main roof outer eave$",
+        "^entrada:Clay terracotta$"
+      ],
+      "texto": "La cubierta del 106 es de teja curva tipo canal y cobija, confirmada en las fotos. En el modelo, el canal va boca arriba y recoge el agua; la cobija va boca abajo, montada sobre la junta de dos canales, y la tapa. El canal mide 23 a 24 cm de ancho y la cobija 13 a 14 cm, las dos de 39 cm de largo en planta. Cada pieza tiene una sola tarea, y por eso su forma puede ser simple: una curva abierta que en este tipo de teja se fabrica por prensado o moldeo. Si la teja real es de barro o de concreto no está confirmado, y su tamaño real no está medido.",
+      "datos": [
+        [
+          "Canal",
+          "23 a 24 × 39 cm"
+        ],
+        [
+          "Cobija",
+          "13 a 14 × 39 cm"
+        ],
+        [
+          "Paso a lo ancho",
+          "23,5 cm"
+        ],
+        [
+          "Escala del modelo",
+          "±12 %"
+        ]
+      ],
+      "principio": "Separar funciones entre dos piezas permite que cada una tenga la forma más simple para su tarea.",
+      "mira": "En el visor las tejas son un rayado esquemático sobre los tableros, una línea cada 0,5 m y no una por teja.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.1; fotos del 106 (archivo de LM, no publicado)"
+    },
+    {
+      "id": "l02",
+      "nivel": "1",
+      "titulo": "El alféizar",
+      "sub": "Una pieza que saca el agua fuera del muro",
+      "piezas": [
+        "^window sill$"
+      ],
+      "texto": "Bajo cada una de las 113 ventanas del modelo hay un alféizar claro, de 2 a 4 cm más ancho que la ventana, de 5 cm de alto y 34 cm de fondo. Como el vidrio está 9 a 10 cm hacia adentro del muro, el alféizar recibe el agua que escurre por el vidrio y la lleva hasta delante del plano del muro. En piezas de este tipo es habitual darle una leve pendiente hacia afuera y un goterón por debajo, una ranura que corta la gota para que no vuelva por la cara inferior y manche el muro. El perfil real del alféizar del 106 no está confirmado, así que esa parte es principio general.",
+      "datos": [
+        [
+          "Cantidad",
+          "113"
+        ],
+        [
+          "Alto × fondo",
+          "5 × 34 cm"
+        ],
+        [
+          "Sobrancho",
+          "2 a 4 cm"
+        ],
+        [
+          "Ejemplo SE",
+          "2,32 × 0,05 × 0,34 m"
+        ]
+      ],
+      "principio": "Una pieza que sobresale y corta la gota decide dónde cae el agua y protege la superficie de abajo.",
+      "mira": "El borde claro bajo cada ventana y la sombra que deja en el muro.",
+      "certeza": "general",
+      "fuente": "INVENTARIO §4.6, §4.12 (vidrio retrasado)"
+    },
+    {
+      "id": "l03",
+      "nivel": "1",
+      "titulo": "La moldura bajo las ventanas",
+      "sub": "Una línea fina que ordena el muro",
+      "piezas": [
+        "^continuous sill band$"
+      ],
+      "texto": "Bajo los alféizares de cada piso corre una moldura de 5 × 6 cm de sección, a 1,66, 5,46 y 9,11 m. En fotos del 106 se ve como una línea fina bajo las ventanas; su perfil no está medido. En un muro liso de más de 10 m de alto, una pieza lineal que sobresale 6 cm proyecta una línea de sombra continua que marca cada piso. Como principio general, en piezas de este tipo esa línea también ofrece un borde donde el acabado puede terminar o cambiar sin que la junta se note. Si el muro del 106 tiene juntas a esa altura no se sabe.",
+      "datos": [
+        [
+          "Molduras",
+          "11"
+        ],
+        [
+          "Sección",
+          "5 × 6 cm"
+        ],
+        [
+          "Cotas",
+          "1,66 · 5,46 · 9,11 m"
+        ]
+      ],
+      "principio": "Una línea de sombra deliberada disimula tolerancias y da escala a una superficie grande.",
+      "mira": "Mira la fachada SE de frente: la moldura une los pares de ventanas de cada piso.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.5; fotos del 106 (archivo de LM, no publicado)"
+    },
+    {
+      "id": "l04",
+      "nivel": "1",
+      "titulo": "El cabio del alero",
+      "sub": "624 maderos cortos que sostienen el vuelo",
+      "piezas": [
+        "^Exposed timber rafter$"
+      ],
+      "texto": "Bajo los tres aleros asoman maderos oscuros, visibles en fotos del 106. El modelo los dibuja como viguetas horizontales de 7 × 11 cm y 1,65 m de largo, una cada 0,65 m: 70 en cada cara larga y 34 en cada cara corta por alero, 624 en total. Su número, su paso y su sección reales no están medidos, así que estas cifras son del modelo. La sección del modelo es más alta que ancha. Como principio general, una pieza a flexión resiste sobre todo con su altura, porque su módulo resistente crece con el cuadrado del canto. Repetir una pieza corta muchas veces permite usar madera de largo comercial y reemplazar una sola si se daña.",
+      "datos": [
+        [
+          "Cantidad",
+          "624 (208 por alero)"
+        ],
+        [
+          "Sección",
+          "7 × 11 cm"
+        ],
+        [
+          "Largo",
+          "1,65 m"
+        ],
+        [
+          "Paso",
+          "0,65 m"
+        ]
+      ],
+      "principio": "En una pieza a flexión, la altura de la sección rinde más que el ancho.",
+      "mira": "La fila oscura bajo el primer alero; usa Despiece para separarla del tablero.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.2; fotos del 106 (archivo de LM, no publicado)"
+    },
+    {
+      "id": "l05",
+      "nivel": "1",
+      "titulo": "La ménsula",
+      "sub": "Una escuadra blanca bajo cada alero",
+      "piezas": [
+        "^Photo-matched white haunch$"
+      ],
+      "texto": "Bajo cada alero hay ménsulas blancas en escuadra, confirmadas en fotos del 106. En las esquinas van dos, perpendiculares, formando una V. El modelo tiene 78, de 0,26 m de ancho, 0,82 m de alto y 1,50 m de vuelo. Su forma triangular es la de un apoyo en voladizo: lleva la carga del borde hacia el muro por la diagonal. Pero el modelo no dice si estas ménsulas cargan de verdad o son decorativas, y su perfil no está medido. Esa duda es una buena pregunta de clase: qué cambiaría en la forma si la pieza solo tuviera que parecer un apoyo.",
+      "datos": [
+        [
+          "Cantidad",
+          "78 (26 por alero)"
+        ],
+        [
+          "Ancho × alto",
+          "0,26 × 0,82 m"
+        ],
+        [
+          "Vuelo",
+          "1,50 m"
+        ]
+      ],
+      "principio": "El triángulo es la forma mínima indeformable para sostener un voladizo desde un plano vertical.",
+      "mira": "Las ménsulas en V de la esquina del jardín.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.15; fotos del 106 (archivo de LM, no publicado); fuente/src/main.js del repo edificio-106 (PARTES › ménsula)"
+    },
+    {
+      "id": "l06",
+      "nivel": "2",
+      "titulo": "El bloque calado",
+      "sub": "Un módulo de 0,36 m repetido 77 veces",
+      "piezas": [
+        "^Foundation vent recess$",
+        "^Foundation lattice corner$"
+      ],
+      "texto": "Al pie de las caras SE y NO, la base tiene franjas de bloques calados, confirmadas en fotos del 106. En el modelo son 77 bloques, uno cada 0,36 m: 50 en la SE, en un tramo de 18,0 m, y 27 en la NO. Cada uno es un hueco de 0,32 × 0,28 m con cuatro cuadros claros de 12 × 12 cm delante. El dibujo real del calado y su número no están confirmados. El bloque calado es un producto modular clásico: una pieza prensada con huecos que, repetida, forma una pared que deja pasar el aire. Si ventila un espacio bajo el piso del 106 no se sabe.",
+      "datos": [
+        [
+          "Bloques",
+          "77 (50 SE, 27 NO)"
+        ],
+        [
+          "Paso",
+          "0,36 m"
+        ],
+        [
+          "Hueco",
+          "0,32 × 0,28 m"
+        ],
+        [
+          "Cuadros",
+          "308, de 12 × 12 cm"
+        ]
+      ],
+      "principio": "Una pieza modular con huecos convierte un muro en filtro de aire sin piezas móviles.",
+      "mira": "La franja calada a la izquierda de la entrada principal.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.8; fotos del 106 (archivo de LM, no publicado)"
+    },
+    {
+      "id": "l07",
+      "nivel": "2",
+      "titulo": "La ventana como retícula",
+      "sub": "Jamba, parteluz, travesaño y paño",
+      "piezas": [
+        "^window jamb$",
+        "^window mullion$",
+        "^window transom$",
+        "individual pane"
+      ],
+      "texto": "Las fotos muestran ventanas de aluminio claro, en pares en las fachadas largas, divididas en paños. La ventana típica de la fachada SE mide en el modelo 2,28 × 1,63 m y la dividen un parteluz y un travesaño en 4 paños de 1,08 × 0,74 m, con perfiles de 4 × 9 cm. En las caras NE y SO hay ventanas de 1,05 a 1,15 m con 2 paños. El aluminio de carpintería se fabrica por extrusión: un perfil de sección constante que luego se corta a medida y se une en las esquinas. Así, una familia corta de perfiles resuelve ventanas de muchos anchos. Las ventanas de los pisos 2 y 3 son inferidas, y no se sabe qué hojas abren.",
+      "datos": [
+        [
+          "Ventanas",
+          "113"
+        ],
+        [
+          "Ventana típica SE",
+          "2,28 × 1,63 m"
+        ],
+        [
+          "Perfil",
+          "4 × 9 cm"
+        ],
+        [
+          "Paño",
+          "1,08 × 0,74 m"
+        ]
+      ],
+      "principio": "Con perfiles extruidos de sección constante, la variedad de tamaños sale del corte y no del molde.",
+      "mira": "Usa Despiece en Ventanas y lamas para separar el marco del vidrio.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.12; fotos del 106 (archivo de LM, no publicado); README.md del repo edificio-106 (pisos 2 y 3 inferidos)"
+    },
+    {
+      "id": "l08",
+      "nivel": "2",
+      "titulo": "El módulo de la fachada",
+      "sub": "6,70 m: par de ventanas, machón y ménsula",
+      "piezas": [
+        "individual pane",
+        "^Photo-matched white haunch$",
+        "^solid wall$"
+      ],
+      "texto": "La fachada SE se lee como un patrón que se repite. Un ajuste sobre el modelo dio un módulo de vanos de 6,69 m, con 42 bordes que calzan y un error medio de 1,2 cm. En el modelo, cada módulo tiene dos ventanas de 2,28 m, 0,34 m de muro entre las dos del par y 1,80 m entre pares: 2,28 + 0,34 + 2,28 + 1,80 = 6,70 m. Las seis ménsulas centrales de la SE caen cada 6,70 m, sobre el muro angosto entre las dos ventanas del par; las de las puntas van a 0,30 m de la esquina. Así el apoyo del alero y el ritmo de las ventanas comparten la misma medida. En la cara NO las ménsulas no son regulares. Todo sale del modelo, con escala de ±12 %.",
+      "datos": [
+        [
+          "Módulo de vanos",
+          "6,69 m (error medio 1,2 cm)"
+        ],
+        [
+          "Ménsulas SE",
+          "cada 6,70 m (las seis del centro)"
+        ],
+        [
+          "Ventanas SE, piso alto",
+          "14"
+        ]
+      ],
+      "principio": "Un módulo dimensional común coordina piezas de sistemas distintos y reduce las medidas que hay que fabricar.",
+      "mira": "Mira la fachada de la calle de frente y cuenta pares de ventanas entre ménsulas.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.12 y §4.15; docs/ciudad/espiga/kit-medidas.json del repo edificio-106"
+    },
+    {
+      "id": "l09",
+      "nivel": "2",
+      "titulo": "Peldaños iguales",
+      "sub": "Contrahuella y huella en cinco escaleras",
+      "piezas": [
+        "stair",
+        "tread",
+        "riser",
+        "replacement step",
+        "^entrada:Pale cast concrete"
+      ],
+      "texto": "El 106 tiene cinco escaleras en el modelo. La de la entrada tiene 7 peldaños, número contado en una foto del 106; las demás cotas son inferidas. En la escalera trasera NO y en la perpendicular SO, la contrahuella es de 0,16 m y la huella de 0,30 m. Como principio general, todos los peldaños de un tramo deben ser iguales, porque quien sube repite el mismo paso sin mirar cada uno. La lista de revisión que la Alcaldía de Panamá publicó en 2020 para el Decreto 88 de 2002 pide huellas de 0,20 a 0,30 m y contrahuellas de 0,15 a 0,17 m. No se afirma que se aplicara al 106.",
+      "datos": [
+        [
+          "Entrada",
+          "7 peldaños (foto)"
+        ],
+        [
+          "Trasera NO",
+          "8 × 0,16 m, huella 0,30 a 0,32"
+        ],
+        [
+          "SO perpendicular",
+          "8 × 0,16 m, huella 0,30"
+        ],
+        [
+          "SO paralela",
+          "9 × ~0,14 m, huella 0,31"
+        ]
+      ],
+      "principio": "Que los peldaños de un tramo sean iguales es una condición ergonómica.",
+      "mira": "Compara la escalera de la entrada con la escalera trasera de la fachada NO.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.22; fuente/verificacion/entrada/comparativa-entrada.png del repo edificio-106 (recorte de una foto del 106); Alcaldía de Panamá, Dirección de Obras y Construcciones, «Requisitos para la revisión del Decreto #88 del 12 de noviembre de 2002» (lista de revisión de 2 páginas publicada en 2020, Acuerdo 281 de 2016), ítems 16.01 a 16.08, https://doyc.mupa.gob.pa/wp-content/uploads/2020/06/ACC_281_.pdf"
+    },
+    {
+      "id": "l10",
+      "nivel": "2",
+      "titulo": "Tubo y abrazadera",
+      "sub": "Cuatro fijaciones iguales por tubo",
+      "piezas": [
+        "^Small pipe strap$"
+      ],
+      "texto": "Sobre las fachadas SE, NO y NE suben 12 tubos verticales de 10,68 m. En el centro de la NO, una foto del 106 confirma tubos de servicio a la vista. El modelo fija cada tubo con 4 abrazaderas a 0,80, 2,60, 5,50 y 9,20 m, 48 en total. Si son bajantes de lluvia, desagües o ductos no está confirmado. La abrazadera enseña una regla de fijación: sujetar en puntos y no a todo lo largo, para que el tubo pueda dilatarse con el calor sin romper el muro ni pandearse. Es una pieza pequeña que se repite muchas veces.",
+      "datos": [
+        [
+          "Tubos",
+          "12, de 10,68 m"
+        ],
+        [
+          "Abrazaderas",
+          "48 (4 por tubo)"
+        ],
+        [
+          "Cotas",
+          "0,80 · 2,60 · 5,50 · 9,20 m"
+        ]
+      ],
+      "principio": "Fijar en puntos permite que una pieza larga se mueva con la temperatura sin dañar su soporte.",
+      "mira": "Los tres tubos juntos en el centro de la fachada NO.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.19; foto del 106 (archivo de LM, no publicado)"
+    },
+    {
+      "id": "l11",
+      "nivel": "3",
+      "titulo": "El solape de la teja",
+      "sub": "Cómo baja el agua por canal y cobija",
+      "piezas": [
+        "sunshade substrate",
+        "^Main roof upper hip$",
+        "^Main roof outer eave$",
+        "^entrada:Clay terracotta$"
+      ],
+      "texto": "Una cubierta de teja funciona porque cada teja se monta sobre la de abajo y el agua solo puede bajar. En el modelo las filas avanzan unos 33 cm en planta con tejas de 39 cm, así que se solapan unos 6 cm; lo medido es la mediagua SE, con una pendiente de 17,9°. La lluvia que cae sobre una cobija resbala hacia los dos canales vecinos; cada canal vierte en el canal de la fila de abajo, y el último descarga en el borde del alero, 1,65 m fuera del muro. Como principio general, cuanto menor es la pendiente, más solape necesita la teja. La pendiente real del 106 no está medida.",
+      "datos": [
+        [
+          "Avance por fila",
+          "~33 cm en planta"
+        ],
+        [
+          "Solape",
+          "~6 cm"
+        ],
+        [
+          "Pendiente de la mediagua",
+          "17,9° en el modelo"
+        ],
+        [
+          "Tejas en el modelo",
+          "~48.000"
+        ]
+      ],
+      "principio": "En una cubierta de piezas sueltas, la estanqueidad depende de la pendiente y del largo del solape.",
+      "mira": "Abre el detalle y sigue el recorrido del agua de la cumbrera al borde.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §2, §4.1 (medido en el tramo central de la mediagua SE)",
+      "detalle": "teja",
+      "mecanismo": "Recorrido del agua"
+    },
+    {
+      "id": "l12",
+      "nivel": "3",
+      "titulo": "El alero como conjunto",
+      "sub": "Cabio, ménsula, tablero, tabla y teja",
+      "piezas": [
+        "^Exposed timber rafter$",
+        "^Photo-matched white haunch$",
+        "sunshade",
+        "^eave wall band$"
+      ],
+      "texto": "Cada alero del 106 es un componente de cinco piezas que se repiten en los tres aleros: la ménsula contra el muro, los cabios, el tablero inclinado, la tabla de frente y las tejas. En los dos de abajo se suma una faja oscura contra el muro. Vuela 1,65 m. En un corte del modelo perpendicular a la fachada, el borde del primer alero está a 3,734 m y el vidrio del piso 1 va de 1,82 a 3,37 m, 9 a 10 cm hacia adentro. Con esas cotas, desde unos 12° en el corte el alero empieza a sombrear el vidrio, y desde unos 48° lo cubre entero. Es un cálculo de geometría sobre el modelo.",
+      "datos": [
+        [
+          "Vuelo",
+          "1,65 m"
+        ],
+        [
+          "Sofito del alero 1",
+          "3,734 m"
+        ],
+        [
+          "Vidrio del piso 1",
+          "1,82 a 3,37 m"
+        ],
+        [
+          "Sombra total desde",
+          "~48° en el corte (pisos 2 y 3: ~45°)"
+        ]
+      ],
+      "principio": "Un voladizo fijo bien dimensionado sombrea con el sol alto y deja pasar luz con el sol bajo.",
+      "mira": "Abre el detalle y mueve la altura del sol para ver la sombra bajar por la ventana.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §1, §4.12, §4.16; cálculo propio: atan((3,734 − 1,82) / 1,745) = 47,6°",
+      "detalle": "alero",
+      "mecanismo": "Altura del sol en el corte"
+    },
+    {
+      "id": "l13",
+      "nivel": "3",
+      "titulo": "La celosía de lamas",
+      "sub": "Ocho lamas que filtran luz y aire",
+      "piezas": [
+        "^window observed lower louvre$",
+        "^window lower louvre$"
+      ],
+      "texto": "En algunas ventanas del 106 hay paños de lamas horizontales, visibles en fotos del 106. En el modelo son 38 paneles con 301 lamas de 9 a 10 cm de alto y 7 cm de fondo, una cada 9,3 cm, que tapan media ventana. No se sabe si son de vidrio o de aluminio ni si giran. El detalle muestra el principio general de una celosía de lamas operables: cada lama pivota sobre su eje largo y una varilla vertical une todas por un brazo, formando un paralelogramo que las mueve a la vez y paralelas. Ese mecanismo es general, no está confirmado en el 106.",
+      "datos": [
+        [
+          "Paneles",
+          "38 (35 de 8 lamas, 3 de 7)"
+        ],
+        [
+          "Lamas",
+          "301"
+        ],
+        [
+          "Lama",
+          "9 a 10 × 7 cm"
+        ],
+        [
+          "Paso",
+          "9,3 cm"
+        ]
+      ],
+      "principio": "Un paralelogramo articulado convierte un solo movimiento lineal en el giro igual de muchas piezas.",
+      "mira": "Abre el detalle y gira las lamas; después busca los paneles rayados en el testero NE.",
+      "certeza": "general",
+      "fuente": "INVENTARIO §4.13 y §5; fotos del 106 (archivo de LM, no publicado)",
+      "detalle": "celosia",
+      "mecanismo": "Giro de las lamas"
+    },
+    {
+      "id": "l14",
+      "nivel": "3",
+      "titulo": "El pórtico de entrada",
+      "sub": "Columna, zapata, viga y cabio",
+      "piezas": [
+        "^entrada:Fresh cream trim$",
+        "^entrada:Dark stained roof timber$",
+        "^entrada:Clay terracotta$"
+      ],
+      "texto": "Delante de la puerta principal hay un pórtico angosto y bajo, con columnas blancas cuadradas y una banda de madera oscura, confirmado en una foto del 106. Sus medidas son proporciones calibradas sobre esa foto: tres columnas, dos al frente a 2,20 m entre ejes (la calibración dio de 2,10 a 2,16 m y se adoptó 2,20), cada una con basa de 0,52 m, fuste de 0,38 m y capitel de 0,47 m hasta 2,40 m. Encima, dos zapatas de 1,00 m reciben una viga de 2,90 × 0,30 m, y cinco cabios de 8 × 10 cm cada 0,60 m llevan el techo de teja. Como principio del tipo, en un apoyo así la carga baja del techo a la viga, a la zapata, al capitel, al fuste y a la basa.",
+      "datos": [
+        [
+          "Columnas",
+          "3, a 2,20 m entre ejes"
+        ],
+        [
+          "Basa · fuste · capitel",
+          "0,52 · 0,38 · 0,47 m"
+        ],
+        [
+          "Zapatas",
+          "2, de 1,00 m"
+        ],
+        [
+          "Cabios",
+          "5, cada 0,60 m"
+        ]
+      ],
+      "principio": "En un apoyo, cada pieza intermedia ensancha la superficie de contacto de la siguiente.",
+      "mira": "Usa Despiece en Accesos y mira cómo se separan columnas y maderas.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.25; fuente/portico.mjs del repo edificio-106; fuente/verificacion/entrada/comparativa-entrada.png del repo edificio-106 (recorte de una foto del 106)"
+    },
+    {
+      "id": "l15",
+      "nivel": "3",
+      "titulo": "La rampa y su baranda",
+      "sub": "Dos tramos al 8,1 % con descanso",
+      "piezas": [
+        "^entrada:Pale cast concrete — entrance$",
+        "^entrada:Galvanized guardrail$"
+      ],
+      "texto": "A la derecha del pórtico, una rampa de dos tramos con giro sube adosada a la fachada; está confirmada en foto. En el modelo, cada tramo mide 5,90 m y sube 0,48 m, con una pendiente de 8,1 %, y un descanso de 1,40 × 2,74 m une los dos; por la línea central, el recorrido es de unos 14,6 m. La baranda tiene postes cada 0,98 m, un pasamanos de 5,4 cm de diámetro y dos travesaños de 3,6 cm. La lista de revisión que la Alcaldía de Panamá publicó en 2020 pide pendiente máxima de 8,33 %, tramos de hasta 6,00 m al 8 % y pasamanos de 0,04 a 0,05 m. Con cotas inferidas y escala de ±12 %, el modelo no permite decir si cumple.",
+      "datos": [
+        [
+          "Pendiente",
+          "8,1 %"
+        ],
+        [
+          "Tramo",
+          "5,90 m, sube 0,48 m"
+        ],
+        [
+          "Descanso",
+          "1,40 × 2,74 m"
+        ],
+        [
+          "Pasamanos",
+          "Ø 5,4 cm"
+        ]
+      ],
+      "principio": "La rampa cambia altura por largo; el descanso y el pasamanos continuo hacen ese largo usable.",
+      "mira": "Abre el detalle y recorre la rampa; compara el largo con la escalera de 7 peldaños.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.24; fuente/barandas.mjs del repo edificio-106; Alcaldía de Panamá, Dirección de Obras y Construcciones, «Requisitos para la revisión del Decreto #88 del 12 de noviembre de 2002» (lista de revisión de 2 páginas publicada en 2020, Acuerdo 281 de 2016), ítems 7.1 a 7.7, https://doyc.mupa.gob.pa/wp-content/uploads/2020/06/ACC_281_.pdf",
+      "detalle": "rampa",
+      "mecanismo": "Subida por la rampa"
+    },
+    {
+      "id": "l16",
+      "nivel": "3",
+      "titulo": "La galería elevada",
+      "sub": "Plataforma sobre pilares en la esquina oeste",
+      "piezas": [
+        "corridor",
+        "^open-bay pier$",
+        "^recessed plinth vent$",
+        "^rust brown vent slat$"
+      ],
+      "texto": "En el extremo SO, una galería elevada rodea la esquina oeste, con barandas pardas y pilares a la vista; fotos del 106 la confirman. En el modelo su piso está a 1,28 m, una cota inferida. El tramo SO mide 1,70 m de ancho y 20,0 m de largo, el NO 1,30 m y 22,45 m. Bajo su borde hay 3 pilares de 0,38 × 0,30 m, a unos 2,3 m entre sí. En el modelo, el tramo SO lleva a la puerta del testero y tiene al frente un murete con tres rejillas de 7 barrotes y un hueco abierto entre pilares cerca de la esquina; el tramo NO se apoya en una base maciza.",
+      "datos": [
+        [
+          "Cota del piso",
+          "1,28 m (inferida)"
+        ],
+        [
+          "Tramo SO",
+          "1,70 × 20,0 m"
+        ],
+        [
+          "Tramo NO",
+          "1,30 × 22,45 m"
+        ],
+        [
+          "Pilares",
+          "3, de 0,38 × 0,30 m"
+        ]
+      ],
+      "principio": "Una plataforma corrida reúne varios accesos en un solo nivel.",
+      "mira": "Gira el dibujo hacia la esquina oeste y usa Corte para ver la galería contra el muro.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §3, §4.9, §4.10, §4.23; fotos del 106 (archivo de LM, no publicado)"
+    },
+    {
+      "id": "l17",
+      "nivel": "3",
+      "titulo": "La puerta de servicio",
+      "sub": "Hoja, listones y una cota sin resolver",
+      "piezas": [
+        "service door",
+        "brown door",
+        "^door handle$",
+        "^Brown access tread$"
+      ],
+      "texto": "Fotos del 106 muestran puertas pardas en las fachadas SE y NO. En el modelo son hojas de 2,54 m de alto con tres listones verticales, en los bordes y al centro; en una hoja plana, listones así suelen servir para rigidizarla contra el alabeo. En una de esas fotos se ve una sola hoja, mientras que el listón central del modelo sugiere dos, así que el número de hojas está en duda. Bisagras y cerradura no están confirmadas. El modelo deja además una cota sin resolver: la puerta NO arranca a 0,70 m y la escalera que llega a ella sube a 1,28 m.",
+      "datos": [
+        [
+          "Alto de hoja",
+          "2,54 m"
+        ],
+        [
+          "Anchos",
+          "1,50 · 1,70 · 1,80 m"
+        ],
+        [
+          "Arranque de la puerta NO",
+          "0,70 m"
+        ],
+        [
+          "Llegada de su escalera",
+          "1,28 m"
+        ]
+      ],
+      "principio": "Comprobar dónde se tocan dos piezas revela errores que cada pieza por separado no muestra.",
+      "mira": "La puerta parda de la fachada NO y la escalera trasera frente a ella.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §4.21 b y c, §4.22; fotos del 106 (archivo de LM, no publicado)"
+    },
+    {
+      "id": "l18",
+      "nivel": "4",
+      "titulo": "La condensadora split",
+      "sub": "Ventilador, serpentín y compresor",
+      "piezas": [
+        "^Condenser"
+      ],
+      "texto": "Al pie de los muros hay condensadoras de aire acondicionado tipo split, confirmadas en varias fotos. Es el único mecanismo confirmado del 106: un ventilador gira detrás de la rejilla redonda. El modelo tiene 15 cajas de 0,91 × 0,62 × 0,44 m; las fotos muestran más, de varios tamaños. El resto es el principio general del aparato: el compresor eleva la presión y la temperatura del refrigerante, el serpentín de aletas lo enfría con el aire que mueve el ventilador hasta condensarlo, y el líquido vuelve por tubería a la unidad interior. En el modelo esa tubería sube por el cubretubos vertical.",
+      "datos": [
+        [
+          "Unidades en el modelo",
+          "15"
+        ],
+        [
+          "Caja",
+          "0,91 × 0,62 × 0,44 m"
+        ],
+        [
+          "Hueco del ventilador",
+          "0,50 × 0,50 m"
+        ],
+        [
+          "Cubretubos",
+          "hasta 2,10 m"
+        ]
+      ],
+      "principio": "En una unidad de este tipo, el aire entra por el serpentín y sale por el ventilador en caras distintas, para no volver a aspirar el aire caliente.",
+      "mira": "Abre el detalle y sigue el refrigerante por el ciclo; luego busca las cajas de la fachada NO.",
+      "certeza": "general",
+      "fuente": "INVENTARIO §4.27 y §5; fotos del 106 (archivo de LM, no publicado)",
+      "detalle": "condensadora",
+      "mecanismo": "Giro del ventilador y ciclo"
+    },
+    {
+      "id": "l19",
+      "nivel": "4",
+      "titulo": "La ventilación del ático",
+      "sub": "Dos gabletes y el aire caliente",
+      "piezas": [
+        "^Gabled roof monitor$",
+        "^Monitor bargeboard$",
+        "^vent (central|cross) timber$",
+        "^Main roof upper hip$"
+      ],
+      "texto": "Bajo el techo principal queda un ático de 44,74 × 22,24 m en planta. En lo alto de cada extremo corto hay un gablete de ventilación: un triángulo de unos 6,20 m de base y 0,99 m de alto, con un montante y un travesaño. El del NE está en una foto del 106; el del SO se extrapoló. El modelo no tiene ventilación de cumbrera. Como principio general, la teja calentada por el sol calienta el aire del ático; ese aire sube y sale por las aberturas más altas, y el viento que entra por un gablete y sale por el otro ayuda a renovarlo. Por dónde entra aire nuevo en el 106 no está documentado.",
+      "datos": [
+        [
+          "Gabletes",
+          "2 (NE en foto, SO extrapolado)"
+        ],
+        [
+          "Hueco",
+          "6,20 × 0,99 m, unos 3,1 m²"
+        ],
+        [
+          "Cota",
+          "14,61 a 15,60 m"
+        ],
+        [
+          "Ático",
+          "44,74 × 22,24 m"
+        ]
+      ],
+      "principio": "El aire caliente sube: una abertura en el punto más alto de un volumen cerrado lo deja salir sin ayuda mecánica.",
+      "mira": "Abre el detalle; después mira el triángulo oscuro en lo alto del testero NE.",
+      "certeza": "general",
+      "fuente": "INVENTARIO §2, §4.18; foto del 106 (archivo de LM, no publicado)",
+      "detalle": "atico",
+      "mecanismo": "Calor en el ático"
+    },
+    {
+      "id": "l20",
+      "nivel": "4",
+      "titulo": "El agua, del techo al suelo",
+      "sub": "Alero, alféizar y zócalo sin canalón",
+      "piezas": [
+        "tiled sunshade fascia",
+        "hipped roof fascia",
+        "^window sill$",
+        "^Foundation$",
+        "^drainage"
+      ],
+      "texto": "Sigue una gota por el edificio. Baja por las tejas, sale del borde de un alero 1,65 m fuera del muro y cae al alero de abajo o al suelo. La que moja el vidrio llega al alféizar, que la saca delante del muro. Al pie, un zócalo de 0,65 m levanta el muro sobre la salpicadura; el modelo lleva marcas de salpicadura en la base de la galería, puestas según fotos del 106. El modelo no tiene canalones, y si los 12 tubos de las fachadas son bajantes no está confirmado. En el modelo no hay ninguna pieza que se sepa dedicada a conducir el agua.",
+      "datos": [
+        [
+          "Vuelo de los aleros",
+          "1,65 m"
+        ],
+        [
+          "Alféizar",
+          "34 cm de fondo"
+        ],
+        [
+          "Zócalo",
+          "0,65 m"
+        ],
+        [
+          "Canalones en el modelo",
+          "ninguno"
+        ]
+      ],
+      "principio": "Un sistema puede emerger de piezas que comparten una regla: alejar el agua de la superficie de abajo.",
+      "mira": "Usa Corte transversal y sigue con la vista el perfil de los tres aleros hasta el zócalo.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §2, §4.6, §4.7, §4.16, §4.19; fotos del 106 (archivo de LM, no publicado)"
+    },
+    {
+      "id": "l21",
+      "nivel": "4",
+      "titulo": "Aletas que disipan",
+      "sub": "El gabinete verde y sus 17 aletas",
+      "piezas": [
+        "^Green utility transformer$",
+        "^Utility cabinet cooling fin$",
+        "^Transformer raised lid$"
+      ],
+      "texto": "Delante de la fachada NO hay un gabinete verde grande con aletas en un costado, confirmado en fotos del 106. En el modelo el cuerpo mide 1,54 × 1,70 × 1,10 m y tiene 17 aletas verticales de 1,26 m, una cada 7,5 cm, y una tapa que sobresale. Por la forma parece un transformador tipo pedestal, pero eso no está confirmado. Como principio general, una aleta multiplica la superficie que cede calor al aire sin aumentar el volumen del aparato, y la tapa que vuela protege las juntas de la lluvia. Es la misma idea del serpentín de la condensadora, a otra escala.",
+      "datos": [
+        [
+          "Cuerpo",
+          "1,54 × 1,70 × 1,10 m"
+        ],
+        [
+          "Aletas",
+          "17, de 1,26 m"
+        ],
+        [
+          "Paso",
+          "7,5 cm"
+        ]
+      ],
+      "principio": "La capacidad de disipar calor crece con la superficie expuesta al aire.",
+      "mira": "El costado con aletas del gabinete verde, frente a la fachada NO.",
+      "certeza": "general",
+      "fuente": "INVENTARIO §4.28; fotos del 106 (archivo de LM, no publicado)"
+    },
+    {
+      "id": "l22",
+      "nivel": "5",
+      "titulo": "El 106 como kit de piezas",
+      "sub": "Pocas familias, muchas unidades",
+      "piezas": [
+        "^Exposed timber rafter$",
+        "^Photo-matched white haunch$",
+        "^window sill$",
+        "^Foundation vent recess$",
+        "^window observed lower louvre$"
+      ],
+      "texto": "Si cuentas las piezas del modelo, el 106 se parece a un producto de catálogo: unas 48.000 tejas, 624 cabios, 301 lamas, 113 ventanas con sus alféizares, 78 ménsulas, 77 bloques calados y 48 abrazaderas. Son cuentas del modelo; el edificio real no se ha contado y la escala tiene ±12 %. Lo que enseñan es la estrategia: pocas familias de piezas, como si cada una se fabricara en serie y se colocara muchas veces con la misma regla de paso. En diseño para fabricación y montaje, reducir el número de piezas distintas abarata la producción y simplifica el montaje.",
+      "datos": [
+        [
+          "Tejas",
+          "~48.000"
+        ],
+        [
+          "Cabios",
+          "624"
+        ],
+        [
+          "Lamas",
+          "301"
+        ],
+        [
+          "Ventanas",
+          "113"
+        ],
+        [
+          "Ménsulas",
+          "78"
+        ]
+      ],
+      "principio": "Lo que simplifica fabricar y montar es tener pocas piezas distintas, aunque cada una se repita muchas veces.",
+      "mira": "Usa Despiece al máximo y busca en cada sistema la pieza que más se repite.",
+      "certeza": "medido",
+      "fuente": "INVENTARIO §4.1, §4.2, §4.8, §4.12, §4.13, §4.15, §4.19"
+    },
+    {
+      "id": "l23",
+      "nivel": "5",
+      "titulo": "El edificio en capas",
+      "sub": "Siete sistemas con vidas distintas",
+      "piezas": [],
+      "texto": "El despiece de este visor separa el 106 en siete sistemas: base, losas, muros, ventanas, cubierta, accesos e instalaciones. Esa separación responde a una pregunta de diseño de producto: qué parte se cambia antes. Como principio general, lo que se reemplaza seguido, como los equipos de aire acondicionado, conviene fijarlo por fuera con piezas pequeñas, y lo que debe durar tanto como el edificio, como la base y las losas, va en el cuerpo. En el 106 las condensadoras y los tubos están por fuera; qué son los tubos y si las tejas y las lamas se desmontan una por una no se sabe. Ordenar un objeto en capas que se pueden separar facilita repararlo sin desarmar lo que no hace falta tocar.",
+      "datos": [
+        [
+          "Sistemas",
+          "7"
+        ],
+        [
+          "Plantas",
+          "3, de 3,65 m"
+        ],
+        [
+          "Planta del muro",
+          "45,50 × 23,00 m"
+        ]
+      ],
+      "principio": "Separar las partes según cuánto duran permite mantener un objeto sin rehacerlo entero.",
+      "mira": "Mueve Despiece de 0 a 100 % y mira qué sistemas quedan por fuera del cuerpo.",
+      "certeza": "general",
+      "fuente": "INVENTARIO §1, §4.19, §4.27; agrupación en sistemas de js/divisor.js"
+    },
+    {
+      "id": "l24",
+      "nivel": "5",
+      "titulo": "Lo que el modelo no sabe",
+      "sub": "Tolerancias, supuestos y verificación",
+      "piezas": [
+        "^floor plane$",
+        "^entrada:Pale cast concrete — entrance$",
+        "corridor finish"
+      ],
+      "texto": "Todo producto se diseña con tolerancias, y este modelo también tiene las suyas. Su escala tiene ±12 % porque la planta salió de una vista de satélite. El piso interior de la planta baja está a 0,65 m, pero el rellano de la entrada llega a 1,12 m y la galería a 1,28 m, y el modelo no resuelve esa diferencia. Las ventanas de los pisos 2 y 3 son inferidas, y no se sabe si las lamas giran ni de qué son. Antes de diseñar una pieza que dependa de esas cotas hay que medir en sitio.",
+      "datos": [
+        [
+          "Escala del modelo",
+          "±12 %"
+        ],
+        [
+          "Piso de la planta baja",
+          "0,65 m en el modelo"
+        ],
+        [
+          "Rellano de la entrada",
+          "1,12 m"
+        ],
+        [
+          "Galería",
+          "1,28 m"
+        ]
+      ],
+      "principio": "Una medida sin su incertidumbre no sirve para fabricar.",
+      "mira": "Usa Corte longitudinal cerca de la entrada y compara el piso interior con el rellano.",
+      "certeza": "modelo",
+      "fuente": "INVENTARIO §1 (incertidumbre del piso) y §7; README.md del repo edificio-106"
+    }
+  ]
+}
