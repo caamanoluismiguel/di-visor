@@ -19,7 +19,7 @@ La dirección guarda lo que se está viendo y se actualiza sola; «Copiar enlace
 
 - `?leccion=l12` abre una lección (`l01` a `l24`, como en `contenido/lecciones.json`).
 - `?sistema=cubierta` aísla un sistema (`base`, `estructura`, `muros`, `ventanas`, `cubierta`, `accesos`, `servicios`).
-- `?pieza=exposed_timber_rafter` elige una familia por su clave (el nombre de `docs/FAMILIAS.md` en minúsculas, sin acentos y con guiones bajos). También valen los nombres de las partes del visor del 106: `techo`, `alero`, `mensula`, `vano`, `modulo`, `principal`, `lateral`, `zocalo`.
+- `?pieza=exposed_timber_rafter` elige una familia por su clave (el nombre de `docs/FAMILIAS.md` en minúsculas, sin acentos y con guiones bajos). También valen los nombres de las partes del visor del 106: `techo`, `alero`, `mensula`, `vano`, `modulo`, `principal`, `zocalo`; `lateral` y `escala` abren el edificio completo.
 - `&corte=z:0.5` corta por un plano (`x` transversal, `y` planta, `z` longitudinal) a esa fracción del edificio, de 0 a 1.
 - `&desp=0.4` separa los sistemas; `&mec=0.6` mueve el mecanismo de una lección con detalle.
 

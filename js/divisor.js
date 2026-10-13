@@ -567,9 +567,10 @@ let restaurando = false;
 // una familia del visor en minúsculas y sin acentos: «Photo-matched white haunch» → photo_matched_white_haunch
 const clave = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
 // nombres cortos para enlazar desde el 106 (sus PARTES) y los de uso común. Una lección cuando la parte es un conjunto.
+// «lateral» (las caras cortas NE y SO) no tiene lección propia: sin alias, abre el edificio completo.
 const ALIAS = {
   techo: { sistema: 'cubierta' }, alero: { leccion: 'l12' }, mensula: { fam: 'Photo-matched white haunch' },
-  vano: { leccion: 'l07' }, modulo: { leccion: 'l08' }, principal: { leccion: 'l08' }, lateral: { leccion: 'l08' },
+  vano: { leccion: 'l07' }, modulo: { leccion: 'l08' }, principal: { leccion: 'l08' },
   zocalo: { leccion: 'l06' }, cabio: { fam: 'Exposed timber rafter' }, alfeizar: { fam: 'window sill' },
   moldura: { fam: 'continuous sill band' }, teja: { leccion: 'l11' }, celosia: { leccion: 'l13' },
   rampa: { leccion: 'l15' }, condensadora: { leccion: 'l18' }, atico: { leccion: 'l19' }, porton: { leccion: 'l14' },
