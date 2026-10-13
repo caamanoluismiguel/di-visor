@@ -4,7 +4,7 @@ D.I.Visor (visor de diseño industrial) es un piloto sobre el Edificio 106 de Is
 
 En vivo: https://caamanoluismiguel.github.io/di-visor/
 
-Este piloto queda congelado: solo recibe correcciones, y su contenido pasa al [visor del Edificio 106](https://caamanoluismiguel.github.io/edificio-106/), que es el modelo vigente.
+Este piloto queda congelado. Su contenido se llevará al [visor del Edificio 106](https://caamanoluismiguel.github.io/edificio-106/), que es el modelo vigente. Mientras tanto solo recibe correcciones.
 
 ## Qué hace
 

@@ -138,7 +138,7 @@ De lo más simple a lo más complejo. Para cada uno doy cinco cosas: (1) el mate
 
 1. Todo en «Dark stained roof timber»:
    - en `modelo/cubiertas.glb`: las tablas de frente y el sofito o tablero (§2);
-   - en `modelo/detalles.glb`: **8 fajas** contra el muro, de 0,27 m de alto y 0,03 de grueso, 4 por mediagua. Van a 4,27 a 4,54 y 7,91 a 8,18 m, a lo largo de las cuatro caras (45,50 y 22,40 m). El alero del techo principal no tiene esta faja; arriba está la faja de arcilla del ático (§4.17).
+   - en `modelo/detalles.glb`: **8 fajas** contra el muro, de 0,27 m de alto y 0,03 de grueso, 4 por mediagua. Van a 4,27 a 4,54 y 7,91 a 8,18 m, a lo largo de las cuatro caras (45,50 y 22,40 m). El alero del techo principal no tiene esta faja; arriba está la faja del ático (§4.17).
 2. Las medidas están en §2 y aquí arriba.
 3. Lo real: la banda parda oscura sobre el arranque de cada mediagua se ve en todas las fotos del 106 (archivo de LM, no publicado; CONFIRMADO). El material (madera o pintura) no está confirmado.
 4. En todo el perímetro, en cada mediagua.
@@ -253,7 +253,7 @@ De lo más simple a lo más complejo. Para cada uno doy cinco cosas: (1) el mate
    | SO | 7 | 8 | 6 | 21 |
    | **Total** | 34 | 42 | 37 | **113** |
 
-   - El visor de edificio-106 dice «112 ventanas … y 4 puertas» (PARTES › vano en `fuente/src/main.js`). La diferencia está en la NE, piso 3: dos ventanas pegadas, a 3 cm una de otra, que se funden en una sola pieza.
+   - Con los 5 vanos de puerta (§4.21), el modelo tiene 118 aberturas. Un conteo por piezas sueltas da una ventana menos: en la NE, piso 3, dos ventanas pegadas, a 3 cm una de otra, se funden en una sola pieza.
    - **Ventana típica de la fachada SE:**
      - marco de 2,28 × 1,63 m (1,60 × 1,63 en las de las puntas), con perfiles de 4 × 9 cm;
      - dividido en 4 paños (2 × 2) por un parteluz y un travesaño a media altura;
@@ -332,7 +332,7 @@ De lo más simple a lo más complejo. Para cada uno doy cinco cosas: (1) el mate
 4. Todo el perímetro, en los pisos 1, 2 y 3.
 5. Mecanismo: ninguno.
 
-### 4.17 Faja de arcilla del ático
+### 4.17 Faja del ático
 
 Ver §2: «Clay-colored vertical attic fascia», 1 pieza en `modelo/cubiertas.glb`, de 0,26 m de alto, de 11,78 a 12,04 m. CONFIRMADO como franja terracota en una foto del 106 (archivo de LM, no publicado). Sin mecanismo.
 
@@ -406,7 +406,7 @@ Ver §2: «Clay-colored vertical attic fascia», 1 pieza en `modelo/cubiertas.gl
 4. Fachada SO, a nivel de la galería, frente a la escalera perpendicular.
 5. Mecanismo: como en b), NO confirmado.
 
-**Cuenta total:** 5 vanos de puerta en el modelo, aunque el visor de edificio-106 dice «4 puertas».
+**Cuenta total:** 5 vanos de puerta en el modelo: la entrada principal y 4 con puerta parda (las 3 de servicio de las fachadas SE y NO y la de la galería SO). Con las 113 ventanas (§4.12), son 118 aberturas.
 
 **Otra inconsistencia:** la puerta NO de x −4,15 a −2,45 arranca a 0,70 m, pero la escalera trasera que llega a ella sube a 1,28 m (§4.22 c). El modelo no lo resuelve.
 

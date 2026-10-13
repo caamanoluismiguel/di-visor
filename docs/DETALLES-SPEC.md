@@ -176,7 +176,7 @@ Además, dibujar la polilínea completa del camino en trazo fino.
 | Cumbrera | línea de x −14,35 a 14,35 a 15,64 | 28,7 m | §1 |
 | Gablete (2) | triángulo vertical en x ±14,35, base 6,20 (z −3,10 a 3,10) a 14,61, vértice a 15,60; hueco con `enfasis` | 3,07 m² cada uno | §4.18 |
 | Montante y travesaño | caja 0,08 × 0,08 (14,61 a 15,53) y caja de 3,40 a 14,92 a 14,99 | | §4.18 |
-| Faja de arcilla | banda a 11,78 a 12,04, 0,38 hacia adentro del muro | | §4.17 |
+| Faja del ático | banda a 11,78 a 12,04, 0,38 hacia adentro del muro | | §4.17 |
 
 **Movimiento (m de 0 a 1):**
 - 0 a 0,6, tiro térmico: 40 partículas (puntos) nacen bajo los faldones, suben con velocidad proporcional a m hacia la cumbrera y salen por los dos gabletes. Ninguna cifra de temperatura en pantalla (no hay datos del 106).
