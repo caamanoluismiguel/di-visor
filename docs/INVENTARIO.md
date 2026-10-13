@@ -622,5 +622,5 @@ Todas son del archivo de LM y no se publican; se citan como «foto del 106 (arch
 8. **Los tubos verticales** (¿bajantes o servicios?) y la falta de canalones.
 9. **Las condensadoras:** el modelo tiene 15; las fotos muestran más, y de varios tamaños.
 10. **El interior:** no hay ninguna medida en metros, y la escalera interior no está modelada.
-11. **Las puertas:** el modelo tiene 5 vanos y el visor de edificio-106 dice 4; el número de hojas está en duda; la puerta NO arranca a 0,70 m pero su escalera llega a 1,28.
+11. **Las puertas:** el modelo tiene 5 vanos de puerta; el número de hojas está en duda; la puerta NO arranca a 0,70 m pero su escalera llega a 1,28.
 12. **La cimentación y el espacio bajo el piso:** los bloques calados lo sugieren, pero no hay confirmación.

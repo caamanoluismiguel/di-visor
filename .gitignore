@@ -1,6 +1,6 @@
 node_modules/
 .DS_Store
-# trabajo interno (rutas privadas, notas de LM): vive en ~/projects/divisor-privado
+# trabajo privado del proyecto, fuera del repo
 docs/PANEL.md
 docs/VERIFICACION.md
 .claude/
